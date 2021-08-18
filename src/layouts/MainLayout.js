@@ -48,7 +48,7 @@ const MainLayout = ({children}) => {
     }, [loginUserData]);
 
     return (
-        <container>
+        <container >
             <Grid item >
                 {/*Header*/}
                 <Grid container item  >
@@ -75,35 +75,41 @@ const MainLayout = ({children}) => {
                         </Grid>
                     </Grid>
                 </Grid>
-                <Grid container item style={{height:window.innerHeight*0.755,paddingTop:20,paddingBottom:20}}  >
+                <Grid container item style={{paddingTop:0,height:window.innerHeight*0.755}}  >
                     {/*Sidebar Section*/}
-                    <Grid container item md={2} style={{justifyContent:"center",backgroundColor:"#1986aa",margin:30}}>
-                       <Grid  item style={{paddingTop:60,width:"100%",justifyContent:"center",paddingBottom:0}}>
+
+                    <Grid container item md={2} style={{justifyContent:"center"}}>
+                        <Grid container item style={{justifyContent:"center",backgroundColor:"#1986aa",margin:20}}>
+                       <Grid align="center"  item style={{paddingTop:0,width:"100%",marginBottom:0}}>
                            <Typography  align="center" style={{  fontFamily:"papyrus",fontWeight:"bold",padding:20,margin:15,backgroundColor:"white"}} >Profile</Typography>
+                           <Typography  align="center" style={{  fontFamily:"papyrus",fontWeight:"bold",padding:20,margin:15,backgroundColor:"white"}} >Progress</Typography>
+                           <Typography  align="center" style={{  fontFamily:"papyrus",fontWeight:"bold",padding:20,margin:15,backgroundColor:"white"}} >Parent</Typography>
+<Grid align="center" style={{  fontFamily:"papyrus",fontWeight:"bold",padding:20,margin:15}}>
+
+</Grid>
                            <Typography  align="center" style={{  fontFamily:"papyrus",fontWeight:"bold",padding:20,margin:15,backgroundColor:"white"}} >Progress</Typography>
                            <Typography  align="center" style={{  fontFamily:"papyrus",fontWeight:"bold",padding:20,margin:15,backgroundColor:"white"}} >Parent</Typography>
 
 
                        </Grid>
-                        <Grid  item style={{width:"100%",justifyContent:"center"}}>
-                            <Typography  align="center" style={{  fontFamily:"papyrus",fontWeight:"bold",padding:20,margin:15,backgroundColor:"white"}} >Select Your Grade</Typography>
-                            <Typography  align="center" style={{  fontFamily:"papyrus",fontWeight:"bold",padding:20,margin:15,backgroundColor:"white"}} >Select Your Grade</Typography>
 
 
-                        </Grid>
-
+                    </Grid>
                     </Grid>
 
                     {/*Page Section*/}
-                    <Grid container item md={9}  >
-                        <Grid container  item align="center" style={{justifyContent:"center"}} >
-                            <Grid align="center"  item style={{paddingTop:0,width:"100%",justifyContent:"center",paddingBottom:0,}}>
+                    <Grid container item md={10} style={{justifyContent:"center"}}  >
 
-                                {children}
+                        <Grid container  item align="center" style={{justifyContent:"center"}} >
+                            <Grid align="center"  item style={{margin:'auto',alignItems:"center",width:"100%",justifyContent:"center",}}>
+<Grid style={{margin:'auto'}} item backgroundColor="black">
+    {children}
+</Grid>
+
                             </Grid>
                         </Grid>
-
                     </Grid>
+
                 </Grid>
 
                  {/*Footer*/}

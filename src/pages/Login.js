@@ -13,6 +13,7 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import themeX from "../theme/index"
+import Image from "../images/loginImg.png"
 function Copyright() {
     return (
         <Typography variant="body2" color="textSecondary" align="center">
@@ -28,7 +29,7 @@ function Copyright() {
 
 const useStyles = makeStyles((theme) => ({
     paper: {
-        marginTop: theme.spacing(8),
+        marginTop: theme.spacing(6),
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
@@ -36,7 +37,6 @@ const useStyles = makeStyles((theme) => ({
     avatar: {
         margin: theme.spacing(3),
         backgroundColor: themeX.palette.primary.main,
-   fontSize:"large"
     },
     form: {
         width: '100%', // Fix IE 11 issue.
@@ -51,13 +51,16 @@ export default function Login() {
     const classes = useStyles();
 
     return (
-        <Container style={{justifyContent: 'center',paddingBottom:100,height:"100%"}} component="main"  >
+        <Container style={{justifyContent: 'center',height:"100%",}} component="main"  >
             <CssBaseline />
-<Grid item container>
+<Grid item container style={{backgroundImage: `url(${Image})`,backgroundHeight:300,backgroundOverlay:"black",
+    backgroundPosition: 'center',backgroundSize:"50%"}}>
+    <Grid item container style={{backgroundColor:"rgba(255, 255, 255, 0.8)",}}>
 <Grid container md={3}>
 </Grid>
-    <Grid container md={6}>
-        <Grid item >
+    <Grid container md={6}  >
+
+        <Grid item style={{padding:20}} >
             <Typography style={{fontFamily:"papyrus",fontWeight:"bold",fontSize:"30px",margin:40}}> SignIn</Typography>
             <Avatar  fontSize="large" className={classes.avatar}>
                 <LockOpenOutlined />
@@ -65,6 +68,7 @@ export default function Login() {
             <hr align="center" style={{width:"50%",}}/>
             <form  className={classes.form} noValidate>
                 <TextField
+                    color="white"
                     variant="outlined"
                     margin="normal"
                     required
@@ -88,17 +92,18 @@ export default function Login() {
                     borderColor="black"
                 />
                 <FormControlLabel
-                    control={<Checkbox value="remember" color={themeX.palette.primary.main} />}
+                    control={<Checkbox value="remember" style={{color: themeX.palette.primary.main}}/>}
                     label="Remember me"
                 />
                 <Button
                     type="submit"
                     fullWidth
+                    color="white"
                     variant="contained"
-                    color={themeX.palette.primary.main}
+                    style={{backgroundColor: themeX.palette.primary.main,}}
                     className={classes.submit}
                 >
-                    Sign In
+                  <span fontColor="white"> Sign In</span>
                 </Button>
                 <Grid container>
                     <Grid item md={6} justifyContent="left"
@@ -117,6 +122,7 @@ export default function Login() {
         </Grid>
     </Grid>
     <Grid container md={3}>
+    </Grid>
     </Grid>
 </Grid>
         </Container>
