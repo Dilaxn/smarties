@@ -74,6 +74,29 @@ const MainLayout = ({children}) => {
                         </Grid>
                     </Grid>
                 </Grid>
+                <Grid container >
+                    {/*Sidebar Section*/}
+                    <Grid container item md={2} style={{justifyContent:"center",backgroundColor:"#1986aa",height:600,margin:30}}>
+                       <Grid  item style={{paddingTop:60,width:"100%",justifyContent:"center",paddingBottom:0}}>
+                           <Typography  align="center" style={{  fontFamily:"papyrus",fontWeight:"bold",padding:20,margin:15,backgroundColor:"white"}} >Profile</Typography>
+                           <Typography  align="center" style={{  fontFamily:"papyrus",fontWeight:"bold",padding:20,margin:15,backgroundColor:"white"}} >Progress</Typography>
+                           <Typography  align="center" style={{  fontFamily:"papyrus",fontWeight:"bold",padding:20,margin:15,backgroundColor:"white"}} >Parent</Typography>
+
+
+                       </Grid>
+                        <Grid  item style={{width:"100%",justifyContent:"center"}}>
+                            <Typography  align="center" style={{  fontFamily:"papyrus",fontWeight:"bold",padding:20,margin:15,backgroundColor:"white"}} >Select Your Grade</Typography>
+                            <Typography  align="center" style={{  fontFamily:"papyrus",fontWeight:"bold",padding:20,margin:15,backgroundColor:"white"}} >Select Your Grade</Typography>
+
+
+                        </Grid>
+
+                    </Grid>
+
+                    {/*Page Section*/}
+                    <Grid item md={10} >
+                    </Grid>
+                </Grid>
             </Grid>
         </container>
     );
