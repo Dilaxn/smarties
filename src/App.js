@@ -4,13 +4,17 @@ import React, {useContext, useEffect} from 'react';
 import {ThemeProvider} from '@material-ui/core';
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
 import MainLayout from "./layouts/MainLayout";
+import Login from './pages/Login';
 function App() {
   return (
       <BrowserRouter>
         {/*<ThemeProvider >*/}
           {/*<AuthProvider>*/}
             <MainLayout>
+                <Switch>
 
+                    <Route exact path='/login' component={Login}/>
+                </Switch>
             </MainLayout>
           {/*</AuthProvider>*/}
         {/*</ThemeProvider>*/}

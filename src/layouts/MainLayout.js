@@ -50,6 +50,7 @@ const MainLayout = ({children}) => {
     return (
         <container>
             <Grid item >
+                {/*Header*/}
                 <Grid container item  >
                     <Grid container item style={{padding:10,margin:20,height:80,border: "1px solid black"}}>
                         <Grid item md={5}>
@@ -74,9 +75,9 @@ const MainLayout = ({children}) => {
                         </Grid>
                     </Grid>
                 </Grid>
-                <Grid container >
+                <Grid container item style={{height:window.innerHeight*0.755,paddingTop:20,paddingBottom:20}}  >
                     {/*Sidebar Section*/}
-                    <Grid container item md={2} style={{justifyContent:"center",backgroundColor:"#1986aa",height:600,margin:30}}>
+                    <Grid container item md={2} style={{justifyContent:"center",backgroundColor:"#1986aa",margin:30}}>
                        <Grid  item style={{paddingTop:60,width:"100%",justifyContent:"center",paddingBottom:0}}>
                            <Typography  align="center" style={{  fontFamily:"papyrus",fontWeight:"bold",padding:20,margin:15,backgroundColor:"white"}} >Profile</Typography>
                            <Typography  align="center" style={{  fontFamily:"papyrus",fontWeight:"bold",padding:20,margin:15,backgroundColor:"white"}} >Progress</Typography>
@@ -94,7 +95,22 @@ const MainLayout = ({children}) => {
                     </Grid>
 
                     {/*Page Section*/}
-                    <Grid item md={10} >
+                    <Grid container item md={9}  >
+                        <Grid container  item align="center" style={{justifyContent:"center"}} >
+                            <Grid align="center"  item style={{paddingTop:0,width:"100%",justifyContent:"center",paddingBottom:0,}}>
+
+                                {children}
+                            </Grid>
+                        </Grid>
+
+                    </Grid>
+                </Grid>
+
+                 {/*Footer*/}
+                <Grid container item  >
+                    <Grid container item style={{justifyContent:"center",padding:10,margin:20,height:40,border: "1px solid black"}}>
+                        <Typography align="center"  >Copyright 2021, SMARTIES', All Rights Reserved</Typography>
+
                     </Grid>
                 </Grid>
             </Grid>
