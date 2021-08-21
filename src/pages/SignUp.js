@@ -155,10 +155,10 @@ export default function SignUp() {
                                     fullWidth
                                     color="white"
                                     variant="contained"
-                                    style={{backgroundColor: themeX.palette.primary.main,}}
+                                    style={{backgroundColor: themeX.palette.primary.main, color:"white"}}
                                     className={classes.submit}
                                 >
-                                    <span fontColor="white"> Sign In</span>
+                                    <span fontColor="white"> Sign Up</span>
                                 </Button>
                                 <Grid container>
                                     <Grid item md={6} justifyContent="left"

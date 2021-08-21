@@ -35,12 +35,15 @@ function Draw(props) {
             <Grid container item md={3}>
                 <Grid container style={{height:400,width:350}} item md={3}  >
                     <Grid container item style={{justifyContent: 'center'}}>
-                       <Typography align="center" style={{
-                            fontFamily: "papyrus",
-                            fontWeight: "bold",
 
-                        }}>{props.head}</Typography>
+                        <Grid style={{justifyContent: 'center'}} >
+                            <Typography align="center" style={{
+                                fontFamily: "papyrus",
+                                fontWeight: "bold",
+                                width:350
+                            }}>{props.head}</Typography>
                         <img style={{height:400,width:350, border: "1px solid black"}} src={props.img}/>
+                        </Grid>
                     </Grid>
 
                 </Grid>

@@ -14,6 +14,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import themeX from "../theme/index"
 import Image from "../images/loginImg.png"
+import '../fonts/index.css'
 function Copyright() {
     return (
         <Typography variant="body2" color="textSecondary" align="center">
@@ -96,14 +97,18 @@ export default function Login() {
                     label="Remember me"
                 />
                 <Button
+
                     type="submit"
                     fullWidth
                     color="white"
                     variant="contained"
-                    style={{backgroundColor: themeX.palette.primary.main,}}
+                    style={{backgroundColor: themeX.palette.primary.main,
+                        color:"white",
+                        fontFamily: 'jokerman-regular, sans-serif'
+                    }}
                     className={classes.submit}
                 >
-                  <span fontColor="white"> Sign In</span>
+                  Sign In 1 2 3
                 </Button>
                 <Grid container>
                     <Grid item md={6} justifyContent="left"

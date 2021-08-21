@@ -5,6 +5,8 @@ import {Link} from 'react-router-dom';
 // import {AlertSnack} from '../pages/component';
 // import {AuthContext} from '../context/AuthContext';
 import slogo from "../images/slogo.png"
+import {useHistory} from "react-router";
+
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -28,6 +30,8 @@ const useStyles = makeStyles((theme) => ({
 
 const MainLayout = ({children}) => {
     const classes = useStyles();
+    let history = useHistory()
+
     // const { alertMessage: authMessage, currentUser, logout} = useContext(AuthContext);
 
     // const messageData = () => {
@@ -55,13 +59,27 @@ const MainLayout = ({children}) => {
                     <Grid container item style={{padding: 10, margin: 20, height: 80, border: "1px solid black"}}>
                         <Grid item md={5}>
                             <Grid item md={4} style={{justifyContent: "center"}}>
-                                <Typography align="center" style={{
+                                <Button
+                                    onClick={
+                                        ()=>{
+                                            history.push('/home')
+                                        }
+                                    }
+                                    align="center"
+
+                                        style={{
                                     fontFamily: "papyrus",
                                     fontWeight: "bold",
                                     padding: 10,
-                                    margin: 2,
+                                    marginLeft: '8%',
+                                    marginRight: '8%',
+                                    marginTop: '4%',
+                                    marginBottom: '4%',
+                                    width: '84%',
+                                    backgroundColor: "white",
+                                    borderRadius:0,
                                     border: "1px solid black"
-                                }}>Home</Typography>
+                                }}>Home</Button>
                             </Grid>
 
                         </Grid>
@@ -70,31 +88,71 @@ const MainLayout = ({children}) => {
                         </Grid>
                         <Grid container item md={5}>
                             <Grid item md={4} style={{justifyContent: "center"}}>
-                                <Typography align="center" style={{
+                                <Button
+                                    onClick={
+                                        ()=>{
+                                            history.push('/courses')
+                                        }
+                                    }
+                                    align="center"
+
+                                        style={{
                                     fontFamily: "papyrus",
                                     fontWeight: "bold",
                                     padding: 10,
-                                    margin: 2,
+                                    marginLeft: '8%',
+                                    marginRight: '8%',
+                                    marginTop: '4%',
+                                    marginBottom: '4%',
+                                    width: '84%',
+                                    backgroundColor: "white",
+                                    borderRadius:0,
                                     border: "1px solid black"
-                                }}>Courses</Typography>
+                                }}>Courses</Button>
                             </Grid>
                             <Grid item md={4} style={{justifyContent: "center"}}>
-                                <Typography align="center" style={{
+                                <Button
+                                    onClick={
+                                        ()=>{
+                                            history.push('/login')
+                                        }
+                                    }
+                                    align="center"
+                                        style={{
                                     fontFamily: "papyrus",
                                     fontWeight: "bold",
                                     padding: 10,
-                                    margin: 2,
+                                    marginLeft: '8%',
+                                    marginRight: '8%',
+                                    marginTop: '4%',
+                                    marginBottom: '4%',
+                                    width: '84%',
+                                    backgroundColor: "white",
+                                    borderRadius:0,
                                     border: "1px solid black"
-                                }}>Login</Typography>
+                                }}>Login</Button>
                             </Grid>
                             <Grid item md={4} style={{justifyContent: "center"}}>
-                                <Typography align="center" style={{
+                                <Button
+                                    onClick={
+                                        ()=>{
+                                            history.push('/signup')
+                                        }
+                                    }
+                                    align="center"
+                                        style={{
                                     fontFamily: "papyrus",
                                     fontWeight: "bold",
                                     padding: 10,
-                                    margin: 2,
+                                    marginLeft: '8%',
+                                    marginRight: '8%',
+                                    marginTop: '4%',
+                                    marginBottom: '4%',
+                                    width: '84%',
+                                    backgroundColor: "white",
+                                    borderRadius:0,
                                     border: "1px solid black"
-                                }}>SignUp</Typography>
+                                }}>SignUp</Button>
                             </Grid>
                         </Grid>
                     </Grid>
@@ -104,46 +162,110 @@ const MainLayout = ({children}) => {
 
                     <Grid container item md={2} style={{justifyContent: "center"}}>
                         <Grid container item style={{justifyContent: "center", backgroundColor: "#1986aa", margin: 20}}>
-                            <Grid align="center" item style={{paddingTop: 0, width: "100%", marginBottom: 0}}>
-                                <Typography align="center" style={{
+                            <Grid align="center" item style={{justifyContent: "center",paddingTop: 0, width: "100%", marginBottom: 0}}>
+
+                                <Button
+                                    onClick={
+                                        ()=>{
+                                            history.push('/profile')
+                                        }
+                                    }
+                                    align="center"
+                                        style={{
                                     fontFamily: "papyrus",
                                     fontWeight: "bold",
                                     padding: 20,
-                                    margin: 15,
-                                    backgroundColor: "white"
-                                }}>Profile</Typography>
-                                <Typography align="center" style={{
+                                    marginLeft: '8%',
+                                    marginRight: '8%',
+                                    marginTop: '12%',
+                                    marginBottom: '4%',
+                                    width: '84%',
+                                    backgroundColor: "white",
+                                    borderRadius:0
+                                }}>Profile</Button>
+
+                                <Button
+                                    onClick={
+                                        ()=>{
+                                            history.push('/progress')
+                                        }
+                                    }
+                                    align="center"
+                                        style={{
                                     fontFamily: "papyrus",
                                     fontWeight: "bold",
                                     padding: 20,
-                                    margin: 15,
-                                    backgroundColor: "white"
-                                }}>Progress</Typography>
-                                <Typography align="center" style={{
+                                    marginLeft: '8%',
+                                    marginRight: '8%',
+                                    marginTop: '4%',
+                                    marginBottom: '4%',
+                                    width: '84%',
+                                    backgroundColor: "white",
+                                    borderRadius:0
+                                }}>Progress</Button>
+                                <Button
+                                    onClick={
+                                        ()=>{
+                                            history.push('/parent')
+                                        }
+                                    }
+                                    align="center"
+                                        style={{
                                     fontFamily: "papyrus",
                                     fontWeight: "bold",
                                     padding: 20,
-                                    margin: 15,
-                                    backgroundColor: "white"
-                                }}>Parent</Typography>
+                                    marginLeft: '8%',
+                                    marginRight: '8%',
+                                    marginTop: '4%',
+                                    marginBottom: '4%',
+                                    width: '84%',
+                                    backgroundColor: "white",
+                                    borderRadius:0
+                                }}>Parent</Button>
                                 <Grid align="center"
                                       style={{fontFamily: "papyrus", fontWeight: "bold", padding: 20, margin: 15}}>
 
                                 </Grid>
-                                <Typography align="center" style={{
+                                <Button
+                                    onClick={
+                                        ()=>{
+                                            history.push('/selectAge')
+                                        }
+                                    }
+                                    align="center" style={{
                                     fontFamily: "papyrus",
                                     fontWeight: "bold",
                                     padding: 20,
-                                    margin: 15,
-                                    backgroundColor: "white"
-                                }}>Progress</Typography>
-                                <Typography align="center" style={{
+                                    marginLeft: '8%',
+                                    marginRight: '8%',
+                                    marginTop: '4%',
+                                    marginBottom: '4%',
+                                    width: '84%',
+                                    backgroundColor: "white",
+                                    borderRadius:0
+                                }}>Select Age</Button>
+                                <Button
+                                    onClick={
+                                        ()=>{
+                                            history.push('/selectGrade')
+                                        }
+                                    }
+                                    align="center" style={{
                                     fontFamily: "papyrus",
                                     fontWeight: "bold",
-                                    padding: 20,
-                                    margin: 15,
-                                    backgroundColor: "white"
-                                }}>Parent</Typography>
+                                    paddingLeft: 10,
+                                    paddingRight: 10,
+                                    paddingTop: 20,
+                                    paddingBottom: 20,
+
+                                    marginLeft: '8%',
+                                    marginRight: '8%',
+                                    marginTop: '4%',
+                                    marginBottom: '4%',
+                                    width: '84%',
+                                    backgroundColor: "white",
+                                    borderRadius:0
+                                }}>Select Grade</Button>
 
 
                             </Grid>

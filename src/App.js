@@ -19,7 +19,7 @@ import ReportKinderArt from "./pages/ReportKinderArt";
 import ReportMath from "./pages/ReportMath"
 import ReportSpeak from "./pages/ReportSpeak";
 import Talk from "./pages/Talk";
-
+import PlayWithMath from './pages/PlayWithMath'
 
 function App() {
   return (
@@ -43,6 +43,8 @@ function App() {
                     <Route exact path='/reportSpeak' component={ReportSpeak}/>
                     <Route exact path='/talk' component={Talk}/>
                     <Route exact path='/grade' component={Grade}/>
+                    <Route exact path='/playWithMath' component={PlayWithMath}/>
+
 
 
 

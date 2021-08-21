@@ -14,6 +14,7 @@ import TextField from "@material-ui/core/TextField";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 import Checkbox from "@material-ui/core/Checkbox";
 import themeX from "../theme";
+import {useHistory} from "react-router";
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -37,6 +38,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Home() {
     const classes = useStyles();
+    let history = useHistory()
 
     return (
         <container>
@@ -52,10 +54,34 @@ export default function Home() {
                                 <Typography  align="center" style={{  maxWidth: "60%",margin:15,opacity:0.6 , fontSize:20}} >A smart way to recommend primary student(Grade 1-3) course using  their skills.</Typography>
                             </Grid>
                             <Grid  item style={{paddingTop:35,width:"100%",justifyContent:"center",paddingBottom:0}}>
-                                <Typography  align="center" style={{  maxWidth: "50%",fontFamily:"papyrus",color:"white",fontWeight:"bold",padding:20,margin:15,backgroundColor:"#1986aa"}} >Kinder Art</Typography>
-                                <Typography  align="center" style={{  maxWidth: "50%",fontFamily:"papyrus",color:"white",fontWeight:"bold",padding:20,margin:15,backgroundColor:"#1986aa"}} >Play With Math</Typography>
-                                <Typography  align="center" style={{  maxWidth: "50%",fontFamily:"papyrus",color:"white",fontWeight:"bold",padding:20,margin:15,backgroundColor:"#1986aa"}} >Take With Smarties'</Typography>
+                                <Grid container item md={3}></Grid>
+                                <Grid  container item md={6}>
 
+                                <Button
+                                    onClick={
+                                        ()=>{
+                                            history.push('/kinderArt')
+                                        }
+                                    }
+
+                                    align="center" style={{ borderRadius:0, maxWidth: "100%",fontFamily:"papyrus",color:"white",fontWeight:"bold",width:'100%',paddingTop:20,paddingBottom:20,marginBottom:10,backgroundColor:"#1986aa"}} >Kinder Art</Button>
+                                    <Button
+                                        onClick={
+                                            ()=>{
+                                                history.push('/playWithMath')
+                                            }
+                                        }
+                                        align="center" style={{ borderRadius:0, maxWidth: "100%",fontFamily:"papyrus",color:"white",fontWeight:"bold",width:'100%',paddingTop:20,paddingBottom:20,marginBottom:10,backgroundColor:"#1986aa"}} >Play With Math</Button>
+                                    <Button
+                                        onClick={
+                                            ()=>{
+                                                history.push('/takeWithsmarties')
+                                            }
+                                        }
+                                        align="center" style={{ borderRadius:0, maxWidth: "100%",fontFamily:"papyrus",color:"white",fontWeight:"bold",width:'100%',paddingTop:20,paddingBottom:20,backgroundColor:"#1986aa"}} >Take With Smarties'</Button>
+
+                                </Grid>
+                                <Grid  container item md={3}></Grid>
 
                             </Grid>
                         </Grid>
