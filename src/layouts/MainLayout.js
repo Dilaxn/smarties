@@ -180,6 +180,7 @@ const MainLayout = ({children}) => {
                         margin: 20,
                         height: 40,
                         border: "1px solid black"
+
                     }}>
                         <Typography align="center">Copyright 2021, SMARTIES', All Rights Reserved</Typography>
 
