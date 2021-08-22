@@ -3,7 +3,8 @@ import {AppBar, Toolbar, Typography, Button, Box, Container, Grid} from '@materi
 import { makeStyles } from '@material-ui/core/styles';
 import mainImag from "../images/mainImag.jpg";
 import {useHistory} from "react-router";
-
+import Image from "../images/loginImg.png";
+import bg from '../images/bg.jpeg'
 
 
 export default function Home() {
@@ -11,8 +12,8 @@ export default function Home() {
 
     return (
         <container >
-            <Grid container style={{justifyContent: 'center',height:"100%"}}>
-            <Grid container  item >
+            <Grid container  style={{backgroundImage: `url(${bg})`,backgroundOverlay:"black",width:"85%",backgroundPosition:"center",backgroundSize:"100%"}}>
+            <Grid container  item style={{backgroundColor:"rgba(255, 255, 255, 0.7)",height:600}} >
                     <Grid container item>
                         <Grid container md={3}>
                         </Grid>

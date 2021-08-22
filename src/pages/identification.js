@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Stepper from '@material-ui/core/Stepper';
 import Step from '@material-ui/core/Step';
@@ -11,6 +11,8 @@ import Identification03 from "../images/Taking/Identification/identification03.p
 import Identification04 from "../images/Taking/Identification/identification04.png"
 import Identification05 from "../images/Taking/Identification/identification05.png"
 import IdentificationInput from "./component/IdentificationInput";
+import level1 from "../images/level1.jpg";
+import level2 from "../images/level2.jpg";
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -44,6 +46,21 @@ function q4(){
 function q5(){
     return( <IdentificationInput head={"5.What is this?"} img={Identification05}/>);
 }
+function q6(){
+    return( <IdentificationInput head={"6.What is this?"} img={Identification01}/>);
+}
+function q7(){
+    return( <IdentificationInput head={"7.What is this?"} img={Identification02}/>);
+}
+function q8(){
+    return( <IdentificationInput head={"8.What is this?"} img={Identification03}/>);
+}
+function q9(){
+    return( <IdentificationInput head={"9.What is this?"} img={Identification04}/>);
+}
+function q10(){
+    return( <IdentificationInput head={"10.What is this?"} img={Identification05}/>);
+}
 
 function getStepContent(stepIndex) {
     switch (stepIndex) {
@@ -57,6 +74,16 @@ function getStepContent(stepIndex) {
             return q4();
         case 4:
             return q5();
+        case 6:
+            return q6();
+        case 7:
+            return q7();
+        case 8:
+            return q8();
+        case 9:
+            return q9();
+        case 10:
+            return q10();
         default:
             return 'Unknown stepIndex';
     }
@@ -65,54 +92,91 @@ function getStepContent(stepIndex) {
 export default function Identification() {
     const classes = useStyles();
     const [activeStep, setActiveStep] = React.useState(0);
+    const [checkStep, setCheckStep] = React.useState(0);
+
     const steps = getSteps();
+    const [steps1,setSteps1]=useState([{lab:"Question 1",num:1}, {lab:"Question 2",num:2}, {lab:"Question 3",num:3}, {lab:"Question 4",num:4}, {lab:"Question 5",num:5}])
 
     const handleNext = () => {
         setActiveStep((prevActiveStep) => prevActiveStep + 1);
+        setCheckStep((prevCheckStep) => prevCheckStep + 1);
+
     };
 
     const handleBack = () => {
         setActiveStep((prevActiveStep) => prevActiveStep - 1);
+        setCheckStep((prevCheckStep) => prevCheckStep - 1);
+
     };
 
     const handleReset = () => {
+        setActiveStep((prevActiveStep) => prevActiveStep + 1);
+        setCheckStep((prevCheckStep) => prevCheckStep + 1);
+
+        setSteps1([{lab:"Question 1",num:6}, {lab:"Question 2",num:7}, {lab:"Question 3",num:8}, {lab:"Question 4",num:9}, {lab:"Question 5",num:10}])
+        setActiveStep(0);    };
+
+    const handleFinish = () => {
+
         setActiveStep(0);
+        setCheckStep(0);
     };
 
     return (
         <div className={classes.root} >
             <div style={{justifyContent: 'center',backgroundColor:"rgba(255, 255, 255, 0.6)",}}>
                 <div>
-                    {activeStep === steps.length ? (
+                    {checkStep === 5 ? (
                         <div>
-                            <Typography className={classes.instructions}>All Questions completed</Typography>
-                            <Button onClick={handleReset}>Reset</Button>
+                            <img src={level1}/>
+                            <Typography className={classes.instructions}>Level 1 completed</Typography>
+                            <Button onClick={handleReset}>Next Level</Button>
                         </div>
                     ) : (
-                        <div>
-                            <Typography className={classes.instructions}>{getStepContent(activeStep)}</Typography>
+                        checkStep === 11 ? (
                             <div>
-                                <Button
-                                    disabled={activeStep === 0}
-                                    onClick={handleBack}
-                                    className={classes.backButton}
-                                >
-                                    Back
-                                </Button>
-                                <Button variant="contained" color="primary" onClick={handleNext}>
-                                    {activeStep === steps.length - 1 ? 'Finish' : 'Next'}
-                                </Button>
+                                <img src={level2}/>
+                                <Typography className={classes.instructions}>Level 2 completed</Typography>
+                                <Button onClick={handleFinish}>Finish</Button>
                             </div>
-                        </div>
+                        ) : (
+                            <div>
+                                <Typography className={classes.instructions}>{getStepContent(checkStep)}</Typography>
+                                <div>
+                                    <Button
+                                        disabled={activeStep === 0}
+                                        onClick={handleBack}
+                                        className={classes.backButton}
+                                    >
+                                        Back
+                                    </Button>
+                                    <Button variant="contained" color="primary" onClick={handleNext}>
+                                        {activeStep === steps.length - 1 ? 'Finish' : 'Next'}
+                                    </Button>
+                                </div>
+                            </div>
+                        )
+
                     )}
                 </div>
+                {/*{activeStep === 5 ? (*/}
+                {/*    <Stepper activeStep={activeStep} alternativeLabel>*/}
+                {/*        {steps.map((label) => (*/}
+                {/*            <Step key={label}>*/}
+                {/*                <StepLabel>{label}</StepLabel>*/}
+                {/*            </Step>*/}
+                {/*        ))}*/}
+                {/*    </Stepper>*/}
+                {/*):(*/}
                 <Stepper activeStep={activeStep} alternativeLabel>
-                    {steps.map((label) => (
-                        <Step key={label}>
-                            <StepLabel>{label}</StepLabel>
+                    {steps1.map((index,label) => (
+                        <Step key={index['num']}>
+                            <StepLabel>{index['lab']}</StepLabel>
                         </Step>
                     ))}
                 </Stepper>
+                {/*)}*/}
+
             </div>
         </div>
     );
