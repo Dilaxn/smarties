@@ -13,7 +13,7 @@ import Grade from "./pages/Grade.js";
 
 import Home from "./pages/Home";
 import KinderArt from "./pages/KiderArt"
-import LetStart from "./pages/LetStart";
+import LetStart from "./pages/component/LetStart";
 import Progress from "./pages/Progress";
 import ReportKinderArt from "./pages/ReportKinderArt";
 import ReportMath from "./pages/ReportMath"

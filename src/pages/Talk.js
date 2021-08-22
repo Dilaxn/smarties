@@ -2,8 +2,11 @@ import React, {useContext, useEffect, useState} from 'react';
 import {AppBar, Toolbar, Typography, Button, Box, Container, Grid} from '@material-ui/core';
 import Object from "../images/Object.jpg";
 import Pronunciation from "../images/Pronunciation.png"
+import {useHistory} from "react-router";
 
 export default function Talk(){
+    let history = useHistory()
+
     return(
         <Container >
             <Grid container item style={{width:"100%",justifyContent:"center"}}>
@@ -11,7 +14,15 @@ export default function Talk(){
                 <Typography   style={{  maxWidth: "100%",margin:15,opacity:0.6 ,fontFamily:"Comic Sans MS",fontStyle:"italic", fontSize:35}} >Start Here</Typography>
 
             <Grid item container style={{paddingTop:20}} >
-                <Grid container item style={{justifyContent:"center" }} md={6}>
+                <Grid onClick={
+                    ()=>{
+                        history.push({
+                            pathname: '/letStart',
+                            state: { detail: '/identification' }
+                        })
+
+                    }
+                } container item style={{justifyContent:"center" }} md={6}>
                     <Grid   item style={{justifyContent:"center" }}>
                         <img style={{padding:5,margin:2,maxWidth: "50%" }}  src={Object} ></img>
                     </Grid>
@@ -19,7 +30,15 @@ export default function Talk(){
 
                 </Grid>
 
-                <Grid container  item style={{justifyContent:"center" }} md={6}>
+                <Grid container  onClick={
+                    ()=>{
+                        history.push({
+                            pathname: '/letStart',
+                            state: { detail: '/pronunciation' }
+                        })
+
+                    }
+                }  item style={{justifyContent:"center" }} md={6}>
                     <Grid container item style={{justifyContent:"center" }}>
                         <img style={{padding:5,margin:2,maxWidth: "50%" }}  src={Pronunciation} ></img>
                     </Grid>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Stepper from '@material-ui/core/Stepper';
 import Step from '@material-ui/core/Step';
@@ -19,25 +19,27 @@ const useStyles = makeStyles((theme) => ({
         marginBottom: theme.spacing(1),
     },
 }));
+let val=[]
+
 
 function getSteps() {
     return ["Question 1","Question 2","Question 3","Question 4","Question 5"];
 }
 //Question 1
 function q1(){
-    return( <DrawFruit head={"1.Draw an apple"} />);
+    return( <DrawFruit head={val[0]} />);
 }
 function q2(){
-    return( <DrawFruit head={"2.Draw An orange"} />);
+    return( <DrawFruit head={val[1]}  />);
 }
 function q3(){
-    return( <DrawFruit head={"3.Draw a Pineapple"} />);
+    return( <DrawFruit head={val[2]}  />);
 }
 function q4(){
-    return( <DrawFruit head={"4.Draw grapes"} />);
+    return( <DrawFruit head={val[3]}  />);
 }
 function q5(){
-    return( <DrawFruit head={"5.Draw banana"} />);
+    return( <DrawFruit head={val[4]}  />);
 }
 
 function getStepContent(stepIndex) {
@@ -57,8 +59,13 @@ function getStepContent(stepIndex) {
     }
 }
 
-export default function DrawFruitTimeline() {
+export default function DrawFruitTimeline(props) {
     const classes = useStyles();
+
+    val = (props.location.state.detail)
+
+
+
     const [activeStep, setActiveStep] = React.useState(0);
     const steps = getSteps();
 
