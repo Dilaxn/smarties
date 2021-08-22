@@ -75,7 +75,7 @@ export default function Home() {
                                     <Button
                                         onClick={
                                             ()=>{
-                                                history.push('/takeWithsmarties')
+                                                history.push('/talk')
                                             }
                                         }
                                         align="center" style={{ borderRadius:0, maxWidth: "100%",fontFamily:"papyrus",color:"white",fontWeight:"bold",width:'100%',paddingTop:20,paddingBottom:20,backgroundColor:"#1986aa"}} >Take With Smarties'</Button>

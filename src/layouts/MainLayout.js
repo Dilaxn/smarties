@@ -6,7 +6,8 @@ import {Link} from 'react-router-dom';
 // import {AuthContext} from '../context/AuthContext';
 import slogo from "../images/slogo.png"
 import {useHistory} from "react-router";
-
+import themeX from '../theme/index'
+import { useLocation, useRouteMatch} from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -58,14 +59,16 @@ const MainLayout = ({children}) => {
                 <Grid container item>
                     <Grid container item style={{padding: 10, margin: 20, height: 80, border: "1px solid black"}}>
                         <Grid item md={5}>
-                            <Grid item md={4} style={{justifyContent: "center"}}>
+                            <Grid item md={4}    style={{justifyContent: "center"}}>
                                 <Button
                                     onClick={
                                         ()=>{
                                             history.push('/home')
+
                                         }
                                     }
                                     align="center"
+
 
                                         style={{
                                     fontFamily: "papyrus",
@@ -78,7 +81,8 @@ const MainLayout = ({children}) => {
                                     width: '84%',
                                     backgroundColor: "white",
                                     borderRadius:0,
-                                    border: "1px solid black"
+                                            border: "1px solid black"
+
                                 }}>Home</Button>
                             </Grid>
 
@@ -161,7 +165,7 @@ const MainLayout = ({children}) => {
                     {/*Sidebar Section*/}
 
                     <Grid container item md={2} style={{justifyContent: "center"}}>
-                        <Grid container item style={{justifyContent: "center", backgroundColor: "#1986aa", margin: 20}}>
+                        <Grid container item style={{justifyContent: "center", backgroundColor: themeX.palette.primary.main, margin: 20}}>
                             <Grid align="center" item style={{justifyContent: "center",paddingTop: 0, width: "100%", marginBottom: 0}}>
 
                                 <Button
@@ -202,26 +206,8 @@ const MainLayout = ({children}) => {
                                     width: '84%',
                                     backgroundColor: "white",
                                     borderRadius:0
-                                }}>Progress</Button>
-                                <Button
-                                    onClick={
-                                        ()=>{
-                                            history.push('/parent')
-                                        }
-                                    }
-                                    align="center"
-                                        style={{
-                                    fontFamily: "papyrus",
-                                    fontWeight: "bold",
-                                    padding: 20,
-                                    marginLeft: '8%',
-                                    marginRight: '8%',
-                                    marginTop: '4%',
-                                    marginBottom: '4%',
-                                    width: '84%',
-                                    backgroundColor: "white",
-                                    borderRadius:0
                                 }}>Parent</Button>
+
                                 <Grid align="center"
                                       style={{fontFamily: "papyrus", fontWeight: "bold", padding: 20, margin: 15}}>
 
