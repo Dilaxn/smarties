@@ -6,11 +6,13 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import TextField from '@material-ui/core/TextField';
 import { makeStyles } from '@material-ui/core/styles';
+import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognition';
 
 import MicIcon from '@material-ui/icons/Mic';
 
 import { useIsMobileOrTablet } from "./utils/isMobileOrTablet";
 import individualIntro2 from "../../images/individualIntro2.png";
+import useSpeechToText from "react-hook-speech-to-text";
 const useStyles = makeStyles((theme) => ({
     root: {
         '& > *': {
@@ -41,6 +43,35 @@ function Draw(props) {
 
 
 
+    const {
+        transcript,
+        listening,
+        resetTranscript,
+        browserSupportsSpeechRecognition
+    } = useSpeechRecognition();
+
+    useEffect(()=>
+        resetTranscript
+    ,[props])
+
+    const {
+        error,
+        interimResult,
+        isRecording,
+        results,
+        startSpeechToText,
+        stopSpeechToText,
+    } = useSpeechToText({
+        continuous: true,
+        useLegacyResults: false
+    });
+    if (error) return <p>Web Speech API is not available in this browser 🤷‍</p>;
+
+
+    if (!browserSupportsSpeechRecognition) {
+        return <span>Browser doesn't support speech recognition.</span>;
+    }
+
     return (
         <container>
             <Grid container style={{marginBottom:40}}>
@@ -66,10 +97,12 @@ function Draw(props) {
                         </Grid>
                         <Grid container item style={{justifyContent: 'center' }}>
                             <Grid item md={3} style={{marginTop: 10}}>
-                                <MicIcon fontSize="large" />
+                                <MicIcon fontSize="large"
+                                         style={listening ? {fill:'green'} : {fill: ''}}
+                                         onClick={listening ? SpeechRecognition.stopListening : SpeechRecognition.startListening} />
                             </Grid>
                             <Grid item md={9}>
-                                <Typography align="center" style={{fontFamily:"Comic Sans MS",fontSize:20,padding:10, border: "1px solid black",opacity:0.6}} >......</Typography>
+                                <Typography align="center" style={{fontFamily:"Comic Sans MS",fontSize:20,padding:10,height:30, border: "1px solid black",opacity:0.6}} >{transcript}</Typography>
 
                             </Grid>
 

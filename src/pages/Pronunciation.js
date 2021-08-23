@@ -10,6 +10,7 @@ import level1 from "../images/level1.jpg";
 import level2 from "../images/level2.jpg";
 import themeX from "../theme";
 import getMuiTheme from 'material-ui/styles/getMuiTheme'
+//new import
 import {MuiThemeProvider} from '@material-ui/core/styles'
 
 const theme = createMuiTheme({
