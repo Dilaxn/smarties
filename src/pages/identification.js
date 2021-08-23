@@ -10,6 +10,11 @@ import Identification02 from "../images/Taking/Identification/identification02.p
 import Identification03 from "../images/Taking/Identification/identification03.png"
 import Identification04 from "../images/Taking/Identification/identification04.png"
 import Identification05 from "../images/Taking/Identification/identification05.png"
+import Identification06 from "../images/Taking/Identification/identification06.png"
+import Identification07 from "../images/Taking/Identification/identification07.png"
+import Identification08 from "../images/Taking/Identification/identification08.png"
+import Identification09 from "../images/Taking/Identification/identification09.png"
+import Identification10 from "../images/Taking/Identification/identification10.png"
 import IdentificationInput from "./component/IdentificationInput";
 import level1 from "../images/level1.jpg";
 import level2 from "../images/level2.jpg";
@@ -47,19 +52,19 @@ function q5(){
     return( <IdentificationInput head={"5.What is this?"} img={Identification05}/>);
 }
 function q6(){
-    return( <IdentificationInput head={"6.What is this?"} img={Identification01}/>);
+    return( <IdentificationInput head={"6.What is this?"} img={Identification06}/>);
 }
 function q7(){
-    return( <IdentificationInput head={"7.What is this?"} img={Identification02}/>);
+    return( <IdentificationInput head={"7.What is this?"} img={Identification07}/>);
 }
 function q8(){
-    return( <IdentificationInput head={"8.What is this?"} img={Identification03}/>);
+    return( <IdentificationInput head={"8.What is this?"} img={Identification08}/>);
 }
 function q9(){
-    return( <IdentificationInput head={"9.What is this?"} img={Identification04}/>);
+    return( <IdentificationInput head={"9.What is this?"} img={Identification09}/>);
 }
 function q10(){
-    return( <IdentificationInput head={"10.What is this?"} img={Identification05}/>);
+    return( <IdentificationInput head={"10.What is this?"} img={Identification10}/>);
 }
 
 function getStepContent(stepIndex) {

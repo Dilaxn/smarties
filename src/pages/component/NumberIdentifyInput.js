@@ -31,17 +31,18 @@ function Draw(props) {
     return (
         <container>
             <Grid container>
-<Grid container item md={3}></Grid>
+            <Grid container item md={2}></Grid>
             <Grid container item md={3}>
-                <Grid container style={{height:400,width:350}} item md={3}  >
+
                     <Grid container item style={{justifyContent: 'center'}}>
                        <Typography align="center" style={{
                             fontFamily: "papyrus",
                             fontWeight: "bold",
 
+
                         }}>{props.head}</Typography>
                         <img style={{height:400,width:350, border: "1px solid black"}} src={props.img}/>
-                    </Grid>
+
 
                 </Grid>
             </Grid>
@@ -86,7 +87,7 @@ function Draw(props) {
                 </div>
 
             </Grid>
-            <Grid container item md={1}></Grid>
+            <Grid container item md={2}></Grid>
             </Grid>
         </container>
     );

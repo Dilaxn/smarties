@@ -45,7 +45,7 @@ function Draw(props) {
         <container>
             <Grid container>
                 <Grid  item style={{width:"100%",justifyContent:"center",paddingBottom:0}}>
-                    <Typography  align="center" style={{  maxWidth: "100%",margin:15,opacity:0.6 ,fontFamily:"Comic Sans MS",fontStyle:"italic", fontSize:35}} >Addition</Typography>
+                    <Typography  align="center" style={{  maxWidth: "100%",margin:15,opacity:0.6 ,fontFamily:"Comic Sans MS",fontStyle:"italic", fontSize:35}} >Pronunciation</Typography>
                 </Grid>
 
                 <Grid container item>
@@ -71,7 +71,7 @@ function Draw(props) {
                                 </Grid>
 
                                 <Grid  item md={9} style={{ width: "100%",fontFamily:"Comic Sans MS"}}>
-                                    <Typography item style={{ fontFamily:"Comic Sans MS",fontSize:45,opacity:0.6,border: "1px solid black"}} >Ball</Typography>
+                                    <Typography item style={{ fontFamily:"Comic Sans MS",fontSize:45,opacity:0.6,border: "1px solid black"}} >...</Typography>
 
                                 </Grid>
 

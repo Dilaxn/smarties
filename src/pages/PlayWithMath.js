@@ -1,7 +1,7 @@
 import React, {useContext, useEffect, useState} from 'react';
 import {AppBar, Toolbar, Typography, Button, Box, Container, Grid} from '@material-ui/core';
-import NumberIdentification from "../images/NumberIdentification.jpeg"
-import Addition from "../images/Addition.jpeg"
+import NumberIdentification from "../images/Numbers.png"
+import Addition from "../images/Addition.png"
 import {useHistory} from "react-router";
 import bg from "../images/bg.jpeg";
 

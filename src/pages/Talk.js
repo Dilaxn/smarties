@@ -1,7 +1,7 @@
 import React, {useContext, useEffect, useState} from 'react';
 import {AppBar, Toolbar, Typography, Button, Box, Container, Grid} from '@material-ui/core';
-import Object from "../images/Object.jpg";
-import Pronunciation from "../images/Pronunciation.png"
+import Object from "../images/Objects.png";
+import Pronunciation from "../images/Pronounciation.png"
 import {useHistory} from "react-router";
 
 export default function Talk(){
@@ -39,7 +39,7 @@ export default function Talk(){
 
                     }
                 }  item style={{justifyContent:"center" }} md={6}>
-                    <Grid container item style={{justifyContent:"center" }}>
+                    <Grid  item style={{justifyContent:"center" }}>
                         <img style={{padding:5,margin:2,maxWidth: "50%" }}  src={Pronunciation} ></img>
                     </Grid>
                     <Typography  align="center" style={{  maxWidth: "100%",margin:15,opacity:0.6 ,fontFamily:"Comic Sans MS",fontStyle:"italic", fontSize:35}} >Pronunciation</Typography>

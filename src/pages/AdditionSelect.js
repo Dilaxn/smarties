@@ -29,34 +29,34 @@ function getSteps() {
 }
 //Question 1
 function q1(){
-    return( <AdditionSelectInput head={"1.Select the correct answer"} a1={'5'} a2={'2'} ans={['1','9','7','3','6']}/>);
+    return( <AdditionSelectInput head={"1.Select the correct answer"} a1={'1'} a2={'2'} ans={['1','9','7','3','6']}/>);
 }
 function q2(){
     return( <AdditionSelectInput head={"2.Select the correct answer"} a1={'5'} a2={'2'} ans={['1','9','7','3','6']}/>);
 }
 function q3(){
-    return( <AdditionSelectInput head={"3.Select the correct answer"} a1={'5'} a2={'2'} ans={['1','9','7','3','6']}/>);
+    return( <AdditionSelectInput head={"3.Select the correct answer"} a1={'2'} a2={'4'} ans={['1','9','7','3','6']}/>);
 }
 function q4(){
-    return( <AdditionSelectInput head={"4.Select the correct answer"} a1={'5'} a2={'2'} ans={['1','9','7','3','6']}/>);
+    return( <AdditionSelectInput head={"4.Select the correct answer"} a1={'1'} a2={'8'} ans={['1','9','7','3','6']}/>);
 }
 function q5(){
-    return( <AdditionSelectInput head={"5.Select the correct answer"} a1={'5'} a2={'2'} ans={['1','9','7','3','6']}/>);
+    return( <AdditionSelectInput head={"5.Select the correct answer"} a1={'5'} a2={'2'} ans={['5','8','2','4','7']}/>);
 }
 function q6(){
-    return( <AdditionSelectInput head={"6.Select the correct answer"} a1={'5'} a2={'2'} ans={['1','9','7','3','6']}/>);
+    return( <AdditionSelectInput head={"6.Select the correct answer"} a1={'1'} a2={'4'} ans={['1','9','5','3','6']}/>);
 }
 function q7(){
-    return( <AdditionSelectInput head={"7.Select the correct answer"} a1={'5'} a2={'2'} ans={['1','9','7','3','6']}/>);
+    return( <AdditionSelectInput head={"7.Select the correct answer"} a1={'5'} a2={'1'} ans={['1','9','7','3','6']}/>);
 }
 function q8(){
-    return( <AdditionSelectInput head={"8.Select the correct answer"} a1={'5'} a2={'2'} ans={['1','9','7','3','6']}/>);
+    return( <AdditionSelectInput head={"8.Select the correct answer"} a1={'3'} a2={'3'} ans={['1','9','7','3','6']}/>);
 }
 function q9(){
-    return( <AdditionSelectInput head={"9.Select the correct answer"} a1={'5'} a2={'2'} ans={['1','9','7','3','6']}/>);
+    return( <AdditionSelectInput head={"9.Select the correct answer"} a1={'4'} a2={'4'} ans={['8','9','2','3','6']}/>);
 }
 function q10(){
-    return( <AdditionSelectInput head={"10.Select the correct answer"} a1={'5'} a2={'2'} ans={['1','9','7','3','6']}/>);
+    return( <AdditionSelectInput head={"10.Select the correct answer"} a1={'5'} a2={'4'} ans={['1','9','7','3','6']}/>);
 }
 
 function getStepContent(stepIndex) {

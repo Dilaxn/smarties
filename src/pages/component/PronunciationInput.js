@@ -56,7 +56,7 @@ function Draw(props) {
                             >{props.head}</Typography>
                         </Grid>
                         <Typography align="center" style={{  maxWidth: "100%",opacity:0.6 ,fontFamily:"Comic Sans MS",fontStyle:"italic", fontSize:50}}
-                        >Cat</Typography>
+                        >{props.word}</Typography>
 
                     </Grid>
 

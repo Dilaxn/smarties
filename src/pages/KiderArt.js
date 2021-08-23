@@ -1,10 +1,11 @@
 import React, {useContext, useEffect, useState} from 'react';
 import {AppBar, Toolbar, Typography, Button, Box, Container, Grid} from '@material-ui/core';
-import Fruit from "../images/Fruit.jpg";
-import Animals from "../images/Animals.jpg"
-import Shapes from "../images/Shapes.jpg"
+import Fruit from "../images/Fruits.png";
+import Animals from "../images/Animals.png"
+import Shapes from "../images/Shapes.png"
 import {useHistory} from "react-router";
 import bg from "../images/bg.jpeg";
+
 
 export default function KiderArt() {
     let history = useHistory()
@@ -29,9 +30,9 @@ export default function KiderArt() {
                         () => {
                             history.push({
                                 pathname: '/letStart',
-                                state: {detail: '/drawFruitTimeline',val:['Draw an apple1','Draw an apple2','Draw an apple3',
-                                        'Draw an apple4','Draw an apple5','Draw an apple6','Draw an apple7','Draw an apple8',
-                                        'Draw an apple9','Draw an apple10']}
+                                state: {detail: '/drawFruitTimeline',val:['Draw an apple','Draw an orange','Draw a mango',
+                                        'Draw a  banana','Draw a strawberry','Draw an avocado','Draw Cherries','Draw Grapes',
+                                        'Draw a Papaya','Draw a Pineapple']}
                             })
 
                         }
@@ -54,9 +55,9 @@ export default function KiderArt() {
                         () => {
                             history.push({
                                 pathname: '/letStart',
-                                state: {detail: '/drawFruitTimeline',val:['Draw an circle 1','Draw an circle2','Draw an circle3',
-                                        'Draw an circle4','Draw an circle5','Draw an circle 6','Draw an circle 7','Draw an circle8',
-                                        'Draw an circle9','Draw an circle10']}
+                                state: {detail: '/drawFruitTimeline',val:['Draw a circle','Draw a rectangle','Draw a square',
+                                        'Draw a triangle','Draw a heart','Draw an arrow','Draw a cross','Draw a star',
+                                        'Draw a crescent','Draw a rhombus']}
                             })
 
                         }
@@ -78,9 +79,9 @@ export default function KiderArt() {
                         () => {
                             history.push({
                                 pathname: '/letStart',
-                                state: {detail: '/drawFruitTimeline',val:['Draw an cat1','Draw an cat2','Draw an cat3',
-                                        'Draw an cat4','Draw an cat5','Draw an cat6','Draw an cat7','Draw an cat8',
-                                        'Draw an cat9','Draw an cat10']}
+                                state: {detail: '/drawFruitTimeline',val:['Draw a dog','Draw a cat','Draw a monkey',
+                                        'Draw a lion','Draw a rabbit','Draw a parrot','Draw a fish','Draw a mouse',
+                                        'Draw a cow','Draw a pig']}
                             })
 
                         }

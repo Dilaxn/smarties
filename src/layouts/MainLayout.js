@@ -224,7 +224,7 @@ const MainLayout = ({children}) => {
                                     padding: 20,
                                     marginLeft: '8%',
                                     marginRight: '8%',
-                                    marginTop: '4%',
+                                    marginTop: '64%',
                                     marginBottom: '4%',
                                     width: '84%',
                                     backgroundColor: "white",

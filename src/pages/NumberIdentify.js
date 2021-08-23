@@ -6,9 +6,17 @@ import StepLabel from '@material-ui/core/StepLabel';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import NumberIdentifyInput from "../pages/component/NumberIdentifyInput"
-import individualIntro1 from "../images/individualIntro1.png"
-import draw1 from "../images/draw/draw1.png"
-import Image from "../images/individualIntroBg.png";
+import NumberIdentification01 from "../images/NumberIdentify/NumberIdentification01.png"
+import NumberIdentification02 from "../images/NumberIdentify/NumberIdentification02.png"
+import NumberIdentification03 from "../images/NumberIdentify/NumberIdentification03.png"
+import NumberIdentification04 from "../images/NumberIdentify/NumberIdentification04.png"
+import NumberIdentification05 from "../images/NumberIdentify/NumberIdentification05.png"
+import NumberIdentification06 from "../images/NumberIdentify/NumberIdentification06.png"
+import NumberIdentification07 from "../images/NumberIdentify/NumberIdentification07.png"
+import NumberIdentification08 from "../images/NumberIdentify/NumberIdentification08.png"
+import NumberIdentification09 from "../images/NumberIdentify/NumberIdentification09.png"
+import NumberIdentification10 from "../images/NumberIdentify/NumberIdentification010.png"
+
 import bg from "../images/bg.jpeg";
 import level1 from "../images/level1.jpg";
 import level2 from "../images/level2.jpg";
@@ -31,34 +39,34 @@ function getSteps() {
 }
 //Question 1
 function q1(){
-    return( <NumberIdentifyInput head={"1.Check"} img={draw1}/>);
+    return( <NumberIdentifyInput head={"1.How many balloons?"} img={NumberIdentification01}/>);
 }
 function q2(){
-    return( <NumberIdentifyInput head={"2.Check"} img={individualIntro1}/>);
+    return( <NumberIdentifyInput head={"2.How many books?"} img={NumberIdentification02}/>);
 }
 function q3(){
-    return( <NumberIdentifyInput head={"3.Check"} img={individualIntro1}/>);
+    return( <NumberIdentifyInput head={"3.How many penguins?"} img={NumberIdentification03}/>);
 }
 function q4(){
-    return( <NumberIdentifyInput head={"4.Check"} img={individualIntro1}/>);
+    return( <NumberIdentifyInput head={"4.How many fish?"} img={NumberIdentification04}/>);
 }
 function q5(){
-    return( <NumberIdentifyInput head={"5.Check"} img={individualIntro1}/>);
+    return( <NumberIdentifyInput head={"5.How many balls?"} img={NumberIdentification05}/>);
 }
 function q6(){
-    return( <NumberIdentifyInput head={"6.Check"} img={draw1}/>);
+    return( <NumberIdentifyInput head={"6.How many pencils?"} img={NumberIdentification06}/>);
 }
 function q7(){
-    return( <NumberIdentifyInput head={"7.Check"} img={individualIntro1}/>);
+    return( <NumberIdentifyInput head={"7.How many umbrellas?"} img={NumberIdentification07}/>);
 }
 function q8(){
-    return( <NumberIdentifyInput head={"8.Check"} img={individualIntro1}/>);
+    return( <NumberIdentifyInput head={"8.How many dogs?"} img={NumberIdentification08}/>);
 }
 function q9(){
-    return( <NumberIdentifyInput head={"9.Check"} img={individualIntro1}/>);
+    return( <NumberIdentifyInput head={"9.How many hats?"} img={NumberIdentification09}/>);
 }
 function q10(){
-    return( <NumberIdentifyInput head={"10.Check"} img={individualIntro1}/>);
+    return( <NumberIdentifyInput head={"10.How many ships?"} img={NumberIdentification10}/>);
 }
 
 function getStepContent(stepIndex) {
@@ -123,7 +131,7 @@ export default function NumberIdentify() {
 
     return (
         <div className={classes.root} style={{backgroundImage: `url(${bg})`,backgroundOverlay:"black",width:"85%",backgroundPosition:"center",backgroundSize:"100%"}}>
-<div style={{justifyContent: 'center',backgroundColor:"rgba(255, 255, 255, 0.6)",}}>
+<div style={{justifyContent: 'center',backgroundColor:"rgba(255, 255, 255, 0.8)",}}>
             <div>
                 {checkStep === 5 ? (
                     <div>

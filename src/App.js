@@ -21,13 +21,14 @@ import ReportSpeak from "./pages/ReportSpeak";
 import Talk from "./pages/Talk";
 import PlayWithMath from './pages/PlayWithMath'
 import AdditionSelect from "./pages/AdditionSelect";
-import AdditionTyping from './pages/AdditionTyping';
+// import AdditionTyping from './pages/AdditionTyping';
 import DrawFruitTimeline from './pages/DrawFruitsTimeline'
 import Identification from './pages/identification';
 import NumberIdentify from './pages/NumberIdentify';
 import Pronunciation from './pages/Pronunciation'
-
+import Chat from './pages/ChatBot'
 import Chips from './pages/check'
+import ChatEnter from "./pages/ChatEnter";
 
 function App() {
   return (
@@ -54,13 +55,16 @@ function App() {
                     <Route exact path='/playWithMath' component={PlayWithMath}/>
 
                     <Route exact path='/additionSelect' component={AdditionSelect}/>
-                    <Route exact path='/additionTyping' component={AdditionTyping}/>
+                    {/*<Route exact path='/additionTyping' component={AdditionTyping}/>*/}
                     <Route exact path='/drawFruitTimeline' component={DrawFruitTimeline}/>
                     <Route exact path='/identification' component={Identification}/>
                     <Route exact path='/numberIdentify' component={NumberIdentify}/>
                     <Route exact path='/pronunciation' component={Pronunciation}/>
 
                     <Route exact path='/chips' component={Chips}/>
+                    <Route exact path='/chat' component={Chat}/>
+                    <Route exact path='/chatEnter' component={ChatEnter}/>
+
 
 
 
