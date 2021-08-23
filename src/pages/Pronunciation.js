@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { makeStyles } from '@material-ui/core/styles';
+import {createMuiTheme, makeStyles} from '@material-ui/core/styles';
 import Stepper from '@material-ui/core/Stepper';
 import Step from '@material-ui/core/Step';
 import StepLabel from '@material-ui/core/StepLabel';
@@ -8,6 +8,26 @@ import Typography from '@material-ui/core/Typography';
 import PronunciationInput from "../pages/component/PronunciationInput"
 import level1 from "../images/level1.jpg";
 import level2 from "../images/level2.jpg";
+import themeX from "../theme";
+import getMuiTheme from 'material-ui/styles/getMuiTheme'
+import {MuiThemeProvider} from '@material-ui/core/styles'
+
+const theme = createMuiTheme({
+    overrides: {
+        MuiStepIcon: {
+            root: {
+                '&$completed': {
+                    color: themeX.palette.primary.main,
+                },
+                '&$active': {
+                    color: themeX.palette.primary.main,
+                },
+            },
+            active: {},
+            completed: {},
+        }
+    }
+    })
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -145,7 +165,7 @@ export default function Pronunciation() {
                                     >
                                         Back
                                     </Button>
-                                    <Button variant="contained" color="primary" onClick={handleNext}>
+                                    <Button variant="contained" style={{color:'white',backgroundColor:themeX.palette.primary.main}}  onClick={handleNext}>
                                         {activeStep === steps.length - 1 ? 'Finish' : 'Next'}
                                     </Button>
                                 </div>
@@ -163,13 +183,15 @@ export default function Pronunciation() {
                 {/*        ))}*/}
                 {/*    </Stepper>*/}
                 {/*):(*/}
+                <MuiThemeProvider theme={theme}>
                 <Stepper activeStep={activeStep} alternativeLabel>
                     {steps1.map((index,label) => (
                         <Step key={index['num']}>
-                            <StepLabel>{index['lab']}</StepLabel>
+                            <StepLabel style={{color:'red'}}>{index['lab']}</StepLabel>
                         </Step>
                     ))}
                 </Stepper>
+                </MuiThemeProvider>
                 {/*)}*/}
 
             </div>
