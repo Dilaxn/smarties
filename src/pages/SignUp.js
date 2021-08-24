@@ -7,13 +7,15 @@ import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Checkbox from '@material-ui/core/Checkbox';
 import Link from '@material-ui/core/Link';
 import Grid from '@material-ui/core/Grid';
+import { ThemeProvider } from 'styled-components'
+
 import Box from '@material-ui/core/Box';
 import LockOpenOutlined from '@material-ui/icons/LockOpenOutlined';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import themeX from "../theme/index"
-import Image from "../images/loginImg.png"
+import bg from "../images/bg.jpeg"
 function Copyright() {
     return (
         <Typography variant="body2" color="textSecondary" align="center">
@@ -45,22 +47,35 @@ const useStyles = makeStyles((theme) => ({
     submit: {
         margin: theme.spacing(3, 0, 2),
     },
+    inputLabel: {
+        color: "lightgray",
+        "&.Mui-focused": {
+            color: themeX.palette.primary.main
+        },
+        outline:'red',
+        borderColor:'red'
+    },
+    input: {
+        color: "#2EFF22"
+    },
+
 }));
 
 export default function SignUp() {
     const classes = useStyles();
 
     return (
+        <ThemeProvider theme={useStyles}>
         <Container style={{justifyContent: 'center',height:"100%",}} component="main"  >
             <CssBaseline />
-            <Grid item container style={{backgroundImage: `url(${Image})`,backgroundHeight:300,backgroundOverlay:"black",
-                backgroundPosition: 'center',backgroundSize:"50%"}}>
+            <Grid item container style={{backgroundImage: `url(${bg})`,backgroundHeight:300,backgroundOverlay:"black",
+                backgroundPosition: 'center',backgroundSize:"cover"}}>
                 <Grid item container style={{backgroundColor:"rgba(255, 255, 255, 0.8)",}}>
                     <Grid container md={2}>
                     </Grid>
                     <Grid container md={8}  >
 
-                        <Grid container item style={{padding:20}} >
+                        <Grid container item style={{padding:20,justifyContent: 'center',}} >
                             <Typography style={{fontFamily:"papyrus",fontWeight:"bold",fontSize:"30px",margin:40}}> SignUp</Typography>
 
                             <form  className={classes.form} noValidate>
@@ -68,8 +83,9 @@ export default function SignUp() {
                                 <Grid container item md={6}>
                                     <Grid item style={{padding:20}}>
                                     <TextField
-                                        variant="outlined"
-                                        margin="normal"
+
+                                        autoFocus='false'
+                                       margin="normal"
                                         required
                                         fullWidth
                                         name="username"
@@ -78,9 +94,12 @@ export default function SignUp() {
                                         id="username"
                                         autoComplete="current-password"
                                         borderColor="black"
+                                        InputProps={{
+                                            className: classes.inputLabel
+                                        }}
+                                        sty
                                     />
                                     <TextField
-                                        variant="outlined"
                                         margin="normal"
                                         required
                                         fullWidth
@@ -92,7 +111,6 @@ export default function SignUp() {
                                         borderColor="black"
                                     />
                                     <TextField
-                                        variant="outlined"
                                         margin="normal"
                                         required
                                         fullWidth
@@ -108,7 +126,6 @@ export default function SignUp() {
                                 <Grid container item md={6}>
                                     <Grid item style={{padding:20}}>
                                     <TextField
-                                        variant="outlined"
                                         margin="normal"
                                         required
                                         fullWidth
@@ -120,7 +137,6 @@ export default function SignUp() {
                                         borderColor="black"
                                     />
                                     <TextField
-                                        variant="outlined"
                                         margin="normal"
                                         required
                                         fullWidth
@@ -131,7 +147,6 @@ export default function SignUp() {
                                         borderColor="black"
                                     />
                                     <TextField
-                                        variant="outlined"
                                         margin="normal"
                                         required
                                         fullWidth
@@ -181,5 +196,6 @@ export default function SignUp() {
                 </Grid>
             </Grid>
         </Container>
+        </ThemeProvider>
     );
 }

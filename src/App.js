@@ -3,6 +3,8 @@ import './App.css';
 import React, {useContext, useEffect} from 'react';
 import {ThemeProvider} from '@material-ui/core';
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
+import PrivateRoute from '../src/pages/component/PrivateRoute';
+
 import MainLayout from "./layouts/MainLayout";
 import Login from './pages/Login';
 import SignUp from "./pages/SignUp";
@@ -37,33 +39,33 @@ function App() {
           {/*<AuthProvider>*/}
             <MainLayout>
                 <Switch>
-
+                    <Route exact path='/' component={Login}/>
                     <Route exact path='/login' component={Login}/>
                     <Route exact path='/signup' component={SignUp}/>
-                    <Route exact path='/individualIntro' component={IndividualIntro}/>
-                    <Route exact path='/timeline' component={Timelines}/>
-                    <Route exact path='/draw' component={Draw}/>
-                    <Route exact path='/home' component={Home}/>
-                    <Route exact path='/kinderArt' component={KinderArt}/>
-                    <Route exact path='/letStart' component={LetStart}/>
-                    <Route exact path='/progress' component={Progress}/>
-                    <Route exact path='/reportKinderArt' component={ReportKinderArt}/>
-                    <Route exact path='/reportMath' component={ReportMath}/>
-                    <Route exact path='/reportSpeak' component={ReportSpeak}/>
-                    <Route exact path='/talk' component={Talk}/>
-                    <Route exact path='/selectGrade' component={Grade}/>
-                    <Route exact path='/playWithMath' component={PlayWithMath}/>
+                    <PrivateRoute exact path='/individualIntro' component={IndividualIntro}/>
+                    <PrivateRoute exact path='/timeline' component={Timelines}/>
+                    <PrivateRoute exact path='/draw' component={Draw}/>
+                    <PrivateRoute exact path='/home' component={Home}/>
+                    <PrivateRoute exact path='/kinderArt' component={KinderArt}/>
+                    <PrivateRoute exact path='/letStart' component={LetStart}/>
+                    <PrivateRoute exact path='/progress' component={Progress}/>
+                    <PrivateRoute exact path='/reportKinderArt' component={ReportKinderArt}/>
+                    <PrivateRoute exact path='/reportMath' component={ReportMath}/>
+                    <PrivateRoute exact path='/reportSpeak' component={ReportSpeak}/>
+                    <PrivateRoute exact path='/talk' component={Talk}/>
+                    <PrivateRoute exact path='/selectGrade' component={Grade}/>
+                    <PrivateRoute exact path='/playWithMath' component={PlayWithMath}/>
 
-                    <Route exact path='/additionSelect' component={AdditionSelect}/>
+                    <PrivateRoute exact path='/additionSelect' component={AdditionSelect}/>
                     {/*<Route exact path='/additionTyping' component={AdditionTyping}/>*/}
-                    <Route exact path='/drawFruitTimeline' component={DrawFruitTimeline}/>
-                    <Route exact path='/identification' component={Identification}/>
-                    <Route exact path='/numberIdentify' component={NumberIdentify}/>
-                    <Route exact path='/pronunciation' component={Pronunciation}/>
+                    <PrivateRoute exact path='/drawFruitTimeline' component={DrawFruitTimeline}/>
+                    <PrivateRoute exact path='/identification' component={Identification}/>
+                    <PrivateRoute exact path='/numberIdentify' component={NumberIdentify}/>
+                    <PrivateRoute exact path='/pronunciation' component={Pronunciation}/>
 
-                    <Route exact path='/chips' component={Chips}/>
-                    <Route exact path='/chat' component={Chat}/>
-                    <Route exact path='/chatEnter' component={ChatEnter}/>
+                    <PrivateRoute exact path='/chips' component={Chips}/>
+                    <PrivateRoute exact path='/chat' component={Chat}/>
+                    <PrivateRoute exact path='/chatEnter' component={ChatEnter}/>
 
 
 

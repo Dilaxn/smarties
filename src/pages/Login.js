@@ -13,7 +13,7 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import themeX from "../theme/index"
-import Image from "../images/loginImg.png"
+import bg from "../images/bg.jpeg"
 import '../fonts/index.css'
 function Copyright() {
     return (
@@ -54,8 +54,8 @@ export default function Login() {
     return (
         <Container style={{justifyContent: 'center',height:"100%",}} component="main"  >
             <CssBaseline />
-<Grid item container style={{backgroundImage: `url(${Image})`,backgroundHeight:300,backgroundOverlay:"black",
-    backgroundPosition: 'center',backgroundSize:"50%"}}>
+<Grid item container style={{backgroundImage: `url(${bg})`,backgroundHeight:300,backgroundOverlay:"black",
+    backgroundPosition: 'center',backgroundSize:'cover'}}>
     <Grid item container style={{backgroundColor:"rgba(255, 255, 255, 0.8)",}}>
 <Grid container md={3}>
 </Grid>
@@ -70,7 +70,6 @@ export default function Login() {
             <form  className={classes.form} noValidate>
                 <TextField
                     color="white"
-                    variant="outlined"
                     margin="normal"
                     required
                     fullWidth
@@ -81,7 +80,6 @@ export default function Login() {
                     autoFocus
                 />
                 <TextField
-                    variant="outlined"
                     margin="normal"
                     required
                     fullWidth
