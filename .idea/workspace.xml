@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="9d207949-aa7c-4722-a493-29b14d30a880" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="ProjectId" id="1wsxEaLAy87t152adiiBZWxmHFK" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="dart.analysis.tool.window.visible" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/pages/component" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_interpreter_path" value="node" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/pages/component" />
+      <recent name="$PROJECT_DIR$/src/images" />
+      <recent name="$PROJECT_DIR$/src/pages" />
+      <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$/src/images/draw" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9d207949-aa7c-4722-a493-29b14d30a880" name="Default Changelist" comment="" />
+      <created>1629260987259</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1629260987259</updated>
+      <workItem from="1629260988439" duration="249000" />
+      <workItem from="1629261561432" duration="12777000" />
+      <workItem from="1629288484158" duration="11206000" />
+      <workItem from="1629385407578" duration="10995000" />
+      <workItem from="1629446523507" duration="677000" />
+      <workItem from="1629466744763" duration="1955000" />
+      <workItem from="1629529243445" duration="8904000" />
+      <workItem from="1629555402988" duration="5431000" />
+      <workItem from="1629574547275" duration="3470000" />
+      <workItem from="1629611068611" duration="11216000" />
+      <workItem from="1629640417204" duration="8906000" />
+      <workItem from="1629715289215" duration="166000" />
+      <workItem from="1629723566660" duration="16482000" />
+      <workItem from="1629784046657" duration="2646000" />
+      <workItem from="1629789529564" duration="638000" />
+    </task>
+    <task id="LOCAL-00001" summary="Navbar created">
+      <created>1629265457150</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1629265457150</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Added sidebar">
+      <created>1629272860802</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1629272860802</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Login page added">
+      <created>1629289018238</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1629289018238</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Login page done">
+      <created>1629299166328</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1629299166328</updated>
+    </task>
+    <task id="LOCAL-00005" summary="SignUp page done">
+      <created>1629300742020</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1629300742021</updated>
+    </task>
+    <task id="LOCAL-00006" summary="IndividualItro finished">
+      <created>1629303926214</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1629303926214</updated>
+    </task>
+    <task id="LOCAL-00007" summary="other page sections merged">
+      <created>1629533485545</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1629533485545</updated>
+    </task>
+    <task id="LOCAL-00008" summary="recent commit with linked pages">
+      <created>1629569228884</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1629569228884</updated>
+    </task>
+    <task id="LOCAL-00009" summary="last update roadmap and chat balance">
+      <created>1629618124343</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1629618124343</updated>
+    </task>
+    <task id="LOCAL-00010" summary="letStart set for paths and dynamically changing the heads">
+      <created>1629621167064</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1629621167064</updated>
+    </task>
+    <task id="LOCAL-00011" summary="created paths for Grade.js">
+      <created>1629622054678</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1629622054678</updated>
+    </task>
+    <task id="LOCAL-00012" summary="completely changed to levels of exercise">
+      <created>1629650040671</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1629650040671</updated>
+    </task>
+    <task id="LOCAL-00013" summary="added chatbot section">
+      <created>1629736823324</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1629736823324</updated>
+    </task>
+    <task id="LOCAL-00014" summary="changed the stepper color">
+      <created>1629740470234</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1629740470234</updated>
+    </task>
+    <task id="LOCAL-00015" summary="voice section done and dusted">
+      <created>1629749674887</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1629749674888</updated>
+    </task>
+    <task id="LOCAL-00016" summary="last update">
+      <created>1629789550840</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1629789550840</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Navbar created" />
+    <MESSAGE value="Added sidebar" />
+    <MESSAGE value="Login page added" />
+    <MESSAGE value="Login page done" />
+    <MESSAGE value="SignUp page done" />
+    <MESSAGE value="IndividualItro finished" />
+    <MESSAGE value="other page sections merged" />
+    <MESSAGE value="recent commit with linked pages" />
+    <MESSAGE value="last update roadmap and chat balance" />
+    <MESSAGE value="letStart set for paths and dynamically changing the heads" />
+    <MESSAGE value="created paths for Grade.js" />
+    <MESSAGE value="completely changed to levels of exercise" />
+    <MESSAGE value="added chatbot section" />
+    <MESSAGE value="changed the stepper color" />
+    <MESSAGE value="voice section done and dusted" />
+    <MESSAGE value="last update" />
+    <option name="LAST_COMMIT_MESSAGE" value="last update" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
