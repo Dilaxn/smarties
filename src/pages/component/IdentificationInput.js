@@ -1,16 +1,17 @@
 import React, {useEffect, useState} from "react";
-import ReactDOM from "react-dom";
-import CanvasDraw from "react-canvas-draw";
+
 import crypto from "crypto";
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
-import TextField from '@material-ui/core/TextField';
+
 import { makeStyles } from '@material-ui/core/styles';
 
 import MicIcon from '@material-ui/icons/Mic';
 
 import { useIsMobileOrTablet } from "./utils/isMobileOrTablet";
-import individualIntro2 from "../../images/individualIntro2.png";
+import SpeechRecognition, {useSpeechRecognition} from "react-speech-recognition";
+import useSpeechToText from "react-hook-speech-to-text";
+
 const useStyles = makeStyles((theme) => ({
     root: {
         '& > *': {
@@ -22,6 +23,8 @@ const useStyles = makeStyles((theme) => ({
         },
     },
 }));
+
+
 function Draw(props) {
     console.log(props)
     let [items, setItems] = useState([]);
@@ -39,7 +42,34 @@ function Draw(props) {
     }
     const classes = useStyles();
 
+    const {
+        transcript,
+        listening,
+        resetTranscript,
+        browserSupportsSpeechRecognition
+    } = useSpeechRecognition();
 
+    useEffect(()=>
+            resetTranscript
+        ,[props])
+
+    const {
+        error,
+        interimResult,
+        isRecording,
+        results,
+        startSpeechToText,
+        stopSpeechToText,
+    } = useSpeechToText({
+        continuous: true,
+        useLegacyResults: false
+    });
+    if (error) return <p>Web Speech API is not available in this browser 🤷‍</p>;
+
+
+    if (!browserSupportsSpeechRecognition) {
+        return <span>Browser doesn't support speech recognition.</span>;
+    }
 
     return (
         <container>
@@ -67,11 +97,13 @@ function Draw(props) {
                             </Grid>
                             <Grid container item style={{justifyContent: 'center' }}>
                                 <Grid  item md={3}>
-                                    <MicIcon fontSize="large" style={{fontSize:60}} />
+                                    <MicIcon fontSize="large"
+                                             style={listening ? {fill:'green'} : {fill: ''}}
+                                             onClick={listening ? SpeechRecognition.stopListening : SpeechRecognition.startListening} />
                                 </Grid>
 
                                 <Grid  item md={9} style={{ width: "100%",fontFamily:"Comic Sans MS"}}>
-                                    <Typography item style={{ fontFamily:"Comic Sans MS",fontSize:45,opacity:0.6,border: "1px solid black"}} >...</Typography>
+                                    <Typography align="center" style={{fontFamily:"Comic Sans MS",fontSize:20,padding:10,height:30, border: "1px solid black",opacity:0.6}} >{transcript}</Typography>
 
                                 </Grid>
 

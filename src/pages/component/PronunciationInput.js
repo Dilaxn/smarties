@@ -4,14 +4,14 @@ import CanvasDraw from "react-canvas-draw";
 import crypto from "crypto";
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
-import TextField from '@material-ui/core/TextField';
+
 import { makeStyles } from '@material-ui/core/styles';
 import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognition';
 
 import MicIcon from '@material-ui/icons/Mic';
 
 import { useIsMobileOrTablet } from "./utils/isMobileOrTablet";
-import individualIntro2 from "../../images/individualIntro2.png";
+
 import useSpeechToText from "react-hook-speech-to-text";
 const useStyles = makeStyles((theme) => ({
     root: {

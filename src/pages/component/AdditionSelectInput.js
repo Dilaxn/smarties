@@ -1,6 +1,4 @@
 import React, {useEffect, useState} from "react";
-import ReactDOM from "react-dom";
-import CanvasDraw from "react-canvas-draw";
 import crypto from "crypto";
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
@@ -8,7 +6,7 @@ import TextField from '@material-ui/core/TextField';
 import {makeStyles} from '@material-ui/core/styles';
 
 import {useIsMobileOrTablet} from "./utils/isMobileOrTablet";
-import individualIntro2 from "../../images/individualIntro2.png";
+
 
 const useStyles = makeStyles((theme) => ({
     root: {

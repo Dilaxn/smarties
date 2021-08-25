@@ -1,12 +1,12 @@
 import React, {useEffect, useState} from "react";
-import ReactDOM from "react-dom";
+
 import CanvasDraw from "react-canvas-draw";
 import crypto from "crypto";
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 
 import { useIsMobileOrTablet } from "./utils/isMobileOrTablet";
-import individualIntro2 from "../../images/individualIntro2.png";
+
 
 function Draw(props) {
     console.log(props)

@@ -1,13 +1,10 @@
-import React, {useContext, useEffect, useState} from 'react';
-import {AppBar, Toolbar, Typography, Button, Box, Container, Grid} from '@material-ui/core';
+import React, { useEffect, useState} from 'react';
+import {Typography, Button,Grid} from '@material-ui/core';
 import {makeStyles} from '@material-ui/core/styles';
-import {Link} from 'react-router-dom';
-// import {AlertSnack} from '../pages/component';
-// import {AuthContext} from '../context/AuthContext';
 import slogo from "../images/slogo.png"
 import {useHistory} from "react-router";
 import themeX from '../theme/index'
-import { useLocation, useRouteMatch} from 'react-router-dom';
+
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -32,14 +29,6 @@ const useStyles = makeStyles((theme) => ({
 const MainLayout = ({children}) => {
     const classes = useStyles();
     let history = useHistory()
-
-    // const { alertMessage: authMessage, currentUser, logout} = useContext(AuthContext);
-
-    // const messageData = () => {
-    //     if (authMessage) {
-    //         return authMessage;
-    //     }
-    // };
 
     const loginUserData = sessionStorage.getItem('user');
     const [loginUser, SetLoginUser] = useState(false);
@@ -95,7 +84,7 @@ const MainLayout = ({children}) => {
                                 <Button
                                     onClick={
                                         ()=>{
-                                            history.push('/courses')
+                                            history.push('/home')
                                         }
                                     }
                                     align="center"

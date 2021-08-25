@@ -1,6 +1,6 @@
 import React, {useContext, useEffect, useState} from 'react';
 import {AppBar, Toolbar, Typography, Button, Box, Container, Grid} from '@material-ui/core';
-import {makeStyles} from '@material-ui/core/styles';
+
 import individualIntro1 from "../images/individualIntro1.png"
 import individualIntro2 from "../images/individualIntro2.png"
 import individualIntro3 from "../images/individualIntro3.png"

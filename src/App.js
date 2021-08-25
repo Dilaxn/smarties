@@ -1,7 +1,6 @@
-import logo from './logo.svg';
 import './App.css';
-import React, {useContext, useEffect} from 'react';
-import {ThemeProvider} from '@material-ui/core';
+import React from 'react';
+
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
 import PrivateRoute from '../src/pages/component/PrivateRoute';
 
@@ -23,7 +22,6 @@ import ReportSpeak from "./pages/ReportSpeak";
 import Talk from "./pages/Talk";
 import PlayWithMath from './pages/PlayWithMath'
 import AdditionSelect from "./pages/AdditionSelect";
-// import AdditionTyping from './pages/AdditionTyping';
 import DrawFruitTimeline from './pages/DrawFruitsTimeline'
 import Identification from './pages/identification';
 import NumberIdentify from './pages/NumberIdentify';
@@ -33,10 +31,8 @@ import Chips from './pages/check'
 import ChatEnter from "./pages/ChatEnter";
 
 function App() {
-  return (
-      <BrowserRouter>
-        {/*<ThemeProvider >*/}
-          {/*<AuthProvider>*/}
+    return (
+        <BrowserRouter>
             <MainLayout>
                 <Switch>
                     <Route exact path='/' component={Login}/>
@@ -57,7 +53,6 @@ function App() {
                     <PrivateRoute exact path='/playWithMath' component={PlayWithMath}/>
 
                     <PrivateRoute exact path='/additionSelect' component={AdditionSelect}/>
-                    {/*<Route exact path='/additionTyping' component={AdditionTyping}/>*/}
                     <PrivateRoute exact path='/drawFruitTimeline' component={DrawFruitTimeline}/>
                     <PrivateRoute exact path='/identification' component={Identification}/>
                     <PrivateRoute exact path='/numberIdentify' component={NumberIdentify}/>
@@ -66,18 +61,10 @@ function App() {
                     <PrivateRoute exact path='/chips' component={Chips}/>
                     <PrivateRoute exact path='/chat' component={Chat}/>
                     <PrivateRoute exact path='/chatEnter' component={ChatEnter}/>
-
-
-
-
-
-
                 </Switch>
             </MainLayout>
-          {/*</AuthProvider>*/}
-        {/*</ThemeProvider>*/}
-      </BrowserRouter>
-  );
+        </BrowserRouter>
+    );
 }
 
 export default App;

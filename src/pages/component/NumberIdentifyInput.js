@@ -6,7 +6,7 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 
 import { useIsMobileOrTablet } from "./utils/isMobileOrTablet";
-import individualIntro2 from "../../images/individualIntro2.png";
+
 
 function Draw(props) {
     console.log(props)

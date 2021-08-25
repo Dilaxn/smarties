@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { makeStyles } from '@material-ui/core/styles';
+import {createMuiTheme, makeStyles, MuiThemeProvider} from '@material-ui/core/styles';
 import Stepper from '@material-ui/core/Stepper';
 import Step from '@material-ui/core/Step';
 import StepLabel from '@material-ui/core/StepLabel';
@@ -10,6 +10,25 @@ import AdditionSelectInput from "./component/AdditionSelectInput";
 import bg from "../images/bg.jpeg";
 import level1 from "../images/level1.jpg";
 import level2 from "../images/level2.jpg";
+
+import themeX from "../theme";
+
+const theme = createMuiTheme({
+    overrides: {
+        MuiStepIcon: {
+            root: {
+                '&$completed': {
+                    color: themeX.palette.primary.main,
+                },
+                '&$active': {
+                    color: themeX.palette.primary.main,
+                },
+            },
+            active: {},
+            completed: {},
+        }
+    }
+})
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -25,38 +44,58 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function getSteps() {
-    return ["Question 1","Question 2","Question 3","Question 4","Question 5"];
+    return ["Question 1", "Question 2", "Question 3", "Question 4", "Question 5"];
 }
+
 //Question 1
-function q1(){
-    return( <AdditionSelectInput head={"1.Select the correct answer"} a1={'1'} a2={'2'} ans={['1','9','7','3','6']}/>);
+function q1() {
+    return (
+        <AdditionSelectInput head={"1.Select the correct answer"} a1={'1'} a2={'2'} ans={['1', '9', '7', '3', '6']}/>);
 }
-function q2(){
-    return( <AdditionSelectInput head={"2.Select the correct answer"} a1={'5'} a2={'2'} ans={['1','9','7','3','6']}/>);
+
+function q2() {
+    return (
+        <AdditionSelectInput head={"2.Select the correct answer"} a1={'5'} a2={'2'} ans={['1', '9', '7', '3', '6']}/>);
 }
-function q3(){
-    return( <AdditionSelectInput head={"3.Select the correct answer"} a1={'2'} a2={'4'} ans={['1','9','7','3','6']}/>);
+
+function q3() {
+    return (
+        <AdditionSelectInput head={"3.Select the correct answer"} a1={'2'} a2={'4'} ans={['1', '9', '7', '3', '6']}/>);
 }
-function q4(){
-    return( <AdditionSelectInput head={"4.Select the correct answer"} a1={'1'} a2={'8'} ans={['1','9','7','3','6']}/>);
+
+function q4() {
+    return (
+        <AdditionSelectInput head={"4.Select the correct answer"} a1={'1'} a2={'8'} ans={['1', '9', '7', '3', '6']}/>);
 }
-function q5(){
-    return( <AdditionSelectInput head={"5.Select the correct answer"} a1={'5'} a2={'2'} ans={['5','8','2','4','7']}/>);
+
+function q5() {
+    return (
+        <AdditionSelectInput head={"5.Select the correct answer"} a1={'5'} a2={'2'} ans={['5', '8', '2', '4', '7']}/>);
 }
-function q6(){
-    return( <AdditionSelectInput head={"6.Select the correct answer"} a1={'1'} a2={'4'} ans={['1','9','5','3','6']}/>);
+
+function q6() {
+    return (
+        <AdditionSelectInput head={"6.Select the correct answer"} a1={'1'} a2={'4'} ans={['1', '9', '5', '3', '6']}/>);
 }
-function q7(){
-    return( <AdditionSelectInput head={"7.Select the correct answer"} a1={'5'} a2={'1'} ans={['1','9','7','3','6']}/>);
+
+function q7() {
+    return (
+        <AdditionSelectInput head={"7.Select the correct answer"} a1={'5'} a2={'1'} ans={['1', '9', '7', '3', '6']}/>);
 }
-function q8(){
-    return( <AdditionSelectInput head={"8.Select the correct answer"} a1={'3'} a2={'3'} ans={['1','9','7','3','6']}/>);
+
+function q8() {
+    return (
+        <AdditionSelectInput head={"8.Select the correct answer"} a1={'3'} a2={'3'} ans={['1', '9', '7', '3', '6']}/>);
 }
-function q9(){
-    return( <AdditionSelectInput head={"9.Select the correct answer"} a1={'4'} a2={'4'} ans={['8','9','2','3','6']}/>);
+
+function q9() {
+    return (
+        <AdditionSelectInput head={"9.Select the correct answer"} a1={'4'} a2={'4'} ans={['8', '9', '2', '3', '6']}/>);
 }
-function q10(){
-    return( <AdditionSelectInput head={"10.Select the correct answer"} a1={'5'} a2={'4'} ans={['1','9','7','3','6']}/>);
+
+function q10() {
+    return (
+        <AdditionSelectInput head={"10.Select the correct answer"} a1={'5'} a2={'4'} ans={['1', '9', '7', '3', '6']}/>);
 }
 
 function getStepContent(stepIndex) {
@@ -92,7 +131,10 @@ export default function AdditionSelect() {
     const [checkStep, setCheckStep] = React.useState(0);
 
     const steps = getSteps();
-    const [steps1,setSteps1]=useState([{lab:"Question 1",num:1}, {lab:"Question 2",num:2}, {lab:"Question 3",num:3}, {lab:"Question 4",num:4}, {lab:"Question 5",num:5}])
+    const [steps1, setSteps1] = useState([{lab: "Question 1", num: 1}, {lab: "Question 2", num: 2}, {
+        lab: "Question 3",
+        num: 3
+    }, {lab: "Question 4", num: 4}, {lab: "Question 5", num: 5}])
 
     const handleNext = () => {
         setActiveStep((prevActiveStep) => prevActiveStep + 1);
@@ -110,7 +152,10 @@ export default function AdditionSelect() {
         setActiveStep((prevActiveStep) => prevActiveStep + 1);
         setCheckStep((prevCheckStep) => prevCheckStep + 1);
 
-        setSteps1([{lab:"Question 1",num:6}, {lab:"Question 2",num:7}, {lab:"Question 3",num:8}, {lab:"Question 4",num:9}, {lab:"Question 5",num:10}])
+        setSteps1([{lab: "Question 1", num: 6}, {lab: "Question 2", num: 7}, {
+            lab: "Question 3",
+            num: 8
+        }, {lab: "Question 4", num: 9}, {lab: "Question 5", num: 10}])
         setActiveStep(0);
     };
     const handleFinish = () => {
@@ -120,61 +165,71 @@ export default function AdditionSelect() {
     };
 
     return (
-        <div className={classes.root}  style={{backgroundImage: `url(${bg})`,backgroundOverlay:"black",width:"85%",backgroundPosition:"center",backgroundSize:"100%"}}>
-            <div style={{justifyContent: 'center',backgroundColor:"rgba(255, 255, 255, 0.85)",}}>
+        <div className={classes.root} style={{
+            backgroundImage: `url(${bg})`,
+            backgroundOverlay: "black",
+            width: "85%",
+            backgroundPosition: "center",
+            backgroundSize: "100%"
+        }}>
+            <div style={{justifyContent: 'center', backgroundColor: "rgba(255, 255, 255, 0.85)",}}>
+                <div>
+                    {checkStep === 5 ? (
                         <div>
-                            {checkStep === 5 ? (
-                                <div>
-                                    <img src={level1}/>
-                                    <Typography className={classes.instructions}>Level 1 completed</Typography>
-                                    <Button onClick={handleReset}>Next Level</Button>
-                                </div>
-                            ) : (
-                                checkStep === 11 ? (
-                                    <div>
-                                        <img src={level2}/>
-                                        <Typography className={classes.instructions}>Level 2 completed</Typography>
-                                        <Button onClick={handleFinish}>Finish</Button>
-                                    </div>
-                                ) : (
-                                    <div>
-                                        <Typography className={classes.instructions}>{getStepContent(checkStep)}</Typography>
-                                        <div>
-                                            <Button
-                                                disabled={activeStep === 0}
-                                                onClick={handleBack}
-                                                className={classes.backButton}
-                                            >
-                                                Back
-                                            </Button>
-                                            <Button variant="contained" color="primary" onClick={handleNext}>
-                                                {activeStep === steps.length - 1 ? 'Finish' : 'Next'}
-                                            </Button>
-                                        </div>
-                                    </div>
-                                )
-
-                            )}
+                            <img src={level1}/>
+                            <Typography className={classes.instructions}>Level 1 completed</Typography>
+                            <Button onClick={handleReset}>Next Level</Button>
                         </div>
-                        {/*{activeStep === 5 ? (*/}
-                        {/*    <Stepper activeStep={activeStep} alternativeLabel>*/}
-                        {/*        {steps.map((label) => (*/}
-                        {/*            <Step key={label}>*/}
-                        {/*                <StepLabel>{label}</StepLabel>*/}
-                        {/*            </Step>*/}
-                        {/*        ))}*/}
-                        {/*    </Stepper>*/}
-                        {/*):(*/}
-                        <Stepper activeStep={activeStep} alternativeLabel>
-                            {steps1.map((index,label) => (
-                                <Step key={index['num']}>
-                                    <StepLabel>{index['lab']}</StepLabel>
-                                </Step>
-                            ))}
-                        </Stepper>
-                        {/*)}*/}
+                    ) : (
+                        checkStep === 11 ? (
+                            <div>
+                                <img src={level2}/>
+                                <Typography className={classes.instructions}>Level 2 completed</Typography>
+                                <Button onClick={handleFinish}>Finish</Button>
+                            </div>
+                        ) : (
+                            <div>
+                                <Typography className={classes.instructions}>{getStepContent(checkStep)}</Typography>
+                                <div>
+                                    <Button
+                                        disabled={activeStep === 0}
+                                        onClick={handleBack}
+                                        className={classes.backButton}
+                                    >
+                                        Back
+                                    </Button>
+                                    <Button variant="contained"
+                                            style={{color: 'white', backgroundColor: themeX.palette.primary.main}}
+                                            color="primary" onClick={handleNext}>
+                                        {activeStep === steps.length - 1 ? 'Finish' : 'Next'}
+                                    </Button>
+                                </div>
+                            </div>
+                        )
 
-                    </div>
+                    )}
                 </div>
+                {/*{activeStep === 5 ? (*/}
+                {/*    <Stepper activeStep={activeStep} alternativeLabel>*/}
+                {/*        {steps.map((label) => (*/}
+                {/*            <Step key={label}>*/}
+                {/*                <StepLabel>{label}</StepLabel>*/}
+                {/*            </Step>*/}
+                {/*        ))}*/}
+                {/*    </Stepper>*/}
+                {/*):(*/}
+                <MuiThemeProvider theme={theme}>
+                    <Stepper activeStep={activeStep} alternativeLabel>
+                        {steps1.map((index, label) => (
+                            <Step key={index['num']}>
+                                <StepLabel style={{color: 'red'}}>{index['lab']}</StepLabel>
+                            </Step>
+                        ))}
+                    </Stepper>
+                </MuiThemeProvider>
+                {/*)}*/}
+
+            </div>
+        </div>
     );
 }
