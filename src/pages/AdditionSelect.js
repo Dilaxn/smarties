@@ -13,6 +13,9 @@ import level2 from "../images/level2.jpg";
 
 import themeX from "../theme";
 
+
+import Draw from "../pages/component/draw";
+
 const theme = createMuiTheme({
     overrides: {
         MuiStepIcon: {
@@ -50,52 +53,52 @@ function getSteps() {
 //Question 1
 function q1() {
     return (
-        <AdditionSelectInput head={"1.Select the correct answer"} a1={'1'} a2={'2'} ans={['1', '9', '7', '3', '6']}/>);
+        <AdditionSelectInput head={"1.Select the correct answer"} a1={'1'} a2={'2'} ans={['1', '9', '7', '3', '6']} c={'3'}/>);
 }
 
 function q2() {
     return (
-        <AdditionSelectInput head={"2.Select the correct answer"} a1={'5'} a2={'2'} ans={['1', '9', '7', '3', '6']}/>);
+        <AdditionSelectInput head={"2.Select the correct answer"} a1={'5'} a2={'2'} ans={['1', '9', '7', '3', '6']} c={'3'}/>);
 }
 
 function q3() {
     return (
-        <AdditionSelectInput head={"3.Select the correct answer"} a1={'2'} a2={'4'} ans={['1', '9', '7', '3', '6']}/>);
+        <AdditionSelectInput head={"3.Select the correct answer"} a1={'2'} a2={'4'} ans={['1', '9', '7', '3', '6']} c={'3'}/>);
 }
 
 function q4() {
     return (
-        <AdditionSelectInput head={"4.Select the correct answer"} a1={'1'} a2={'8'} ans={['1', '9', '7', '3', '6']}/>);
+        <AdditionSelectInput head={"4.Select the correct answer"} a1={'1'} a2={'8'} ans={['1', '9', '7', '3', '6']} c={'3'}/>);
 }
 
 function q5() {
     return (
-        <AdditionSelectInput head={"5.Select the correct answer"} a1={'5'} a2={'2'} ans={['5', '8', '2', '4', '7']}/>);
+        <AdditionSelectInput head={"5.Select the correct answer"} a1={'5'} a2={'2'} ans={['5', '8', '2', '4', '7']} c={'3'}/>);
 }
 
 function q6() {
     return (
-        <AdditionSelectInput head={"6.Select the correct answer"} a1={'1'} a2={'4'} ans={['1', '9', '5', '3', '6']}/>);
+        <AdditionSelectInput head={"6.Select the correct answer"} a1={'1'} a2={'4'} ans={['1', '9', '5', '3', '6']} c={'3'}/>);
 }
 
 function q7() {
     return (
-        <AdditionSelectInput head={"7.Select the correct answer"} a1={'5'} a2={'1'} ans={['1', '9', '7', '3', '6']}/>);
+        <AdditionSelectInput head={"7.Select the correct answer"} a1={'5'} a2={'1'} ans={['1', '9', '7', '3', '6']} c={'3'}/>);
 }
 
 function q8() {
     return (
-        <AdditionSelectInput head={"8.Select the correct answer"} a1={'3'} a2={'3'} ans={['1', '9', '7', '3', '6']}/>);
+        <AdditionSelectInput head={"8.Select the correct answer"} a1={'3'} a2={'3'} ans={['1', '9', '7', '3', '6']} c={'3'}/>);
 }
 
 function q9() {
     return (
-        <AdditionSelectInput head={"9.Select the correct answer"} a1={'4'} a2={'4'} ans={['8', '9', '2', '3', '6']}/>);
+        <AdditionSelectInput head={"9.Select the correct answer"} a1={'4'} a2={'4'} ans={['8', '9', '2', '3', '6']} c={'3'}/>);
 }
 
 function q10() {
     return (
-        <AdditionSelectInput head={"10.Select the correct answer"} a1={'5'} a2={'4'} ans={['1', '9', '7', '3', '6']}/>);
+        <AdditionSelectInput head={"10.Select the correct answer"} a1={'5'} a2={'4'} ans={['1', '9', '7', '3', '6']} c={'3'}/>);
 }
 
 function getStepContent(stepIndex) {
@@ -164,6 +167,7 @@ export default function AdditionSelect() {
         setCheckStep(0);
     };
 
+
     return (
         <div className={classes.root} style={{
             backgroundImage: `url(${bg})`,
@@ -219,7 +223,7 @@ export default function AdditionSelect() {
                 {/*    </Stepper>*/}
                 {/*):(*/}
                 <MuiThemeProvider theme={theme}>
-                    <Stepper activeStep={activeStep} alternativeLabel>
+                    <Stepper  activeStep={activeStep} alternativeLabel>
                         {steps1.map((index, label) => (
                             <Step key={index['num']}>
                                 <StepLabel style={{color: 'red'}}>{index['lab']}</StepLabel>

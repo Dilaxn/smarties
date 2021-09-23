@@ -13,6 +13,8 @@ export default function  LetStart(props){
     console.log(props.location.state.detail)
     const url = props.location.state.detail;
     const val = props.location.state.val?props.location.state.val:null;
+    const ans = props.location.state.ans?props.location.state.ans:null;
+
     return(
         <Container>
             <Grid item>
@@ -28,7 +30,7 @@ export default function  LetStart(props){
                                     ()=>{
                                         history.push({
                                             pathname: url,
-                                            state: { detail: val }
+                                            state: { detail: val, answer:ans }
                                         })
                                     }
                                 }

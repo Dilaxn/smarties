@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React, {useContext, useEffect, useState} from "react";
 import ReactDOM from "react-dom";
 import CanvasDraw from "react-canvas-draw";
 import crypto from "crypto";
@@ -6,6 +6,7 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 
 import { useIsMobileOrTablet } from "./utils/isMobileOrTablet";
+import {SelectionMarksContext} from "../../Context/SelectionMarksContext";
 
 
 function Draw(props) {
@@ -27,6 +28,9 @@ function Draw(props) {
     useEffect(()=>{
         saveableCanvas.clear();
     },[props])
+
+    const [selectionMarks, setSelectionMarks]  = useContext(SelectionMarksContext);
+
 
     return (
         <container>
@@ -66,6 +70,7 @@ function Draw(props) {
                                 "0 3px 27px -5px rgba(50, 50, 93, 0.25),    0 8px 16px -8px rgba(0, 0, 0, 0.3)"
                         }}
                     />
+                    {selectionMarks}
                     {/*<button onClick={onSave}>Save</button>*/}
                     {/*<ul>*/}
 

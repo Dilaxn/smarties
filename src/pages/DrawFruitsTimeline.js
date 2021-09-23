@@ -107,10 +107,8 @@ export default function DrawFruitTimeline(props) {
     const classes = useStyles();
 
     const [steps1,setSteps1]=useState([{lab:"Question 1",num:1}, {lab:"Question 2",num:2}, {lab:"Question 3",num:3}, {lab:"Question 4",num:4}, {lab:"Question 5",num:5}])
-
-
-    val = (props.location.state.detail)
-
+    val = (props.location.state)
+    console.log(val)
 
 
     const [activeStep, setActiveStep] = React.useState(0);

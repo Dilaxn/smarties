@@ -7,8 +7,9 @@ import themeX from "../theme";
 
 
 
-export default function  LetStart(){
-
+export default function  LetStart(props){
+  const  val = (props)
+    console.log(props)
     return(
         <Container>
             <Grid item>
@@ -19,7 +20,7 @@ export default function  LetStart(){
                     <Grid container md={6} >
 
                         <Grid container item style={{width:"100%",height:"10%",justifyContent:"center" , paddingTop:150}}>
-                            <Button  align="center" style={{  maxWidth: "100%",fontFamily:"Comic Sans MS",fontStyle:"italic",color:"white",borderRadius:0,paddingLeft:100,paddingBottom:30,paddingTop:30,paddingRight:100,fontSize:30,margin:15,backgroundColor:themeX.palette.primary.main}} >Let's Start</Button>
+                            <Button  align="center" style={{  maxWidth: "100%",fontFamily:"Comic Sans MS",fontStyle:"italic",color:"white",borderRadius:0,paddingLeft:100,paddingBottom:30,paddingTop:30,paddingRight:100,fontSize:30,margin:15,backgroundColor:themeX.palette.primary.main}} >Let's Starttttt</Button>
                         </Grid>
 
 

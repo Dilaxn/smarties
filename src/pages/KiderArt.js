@@ -43,9 +43,12 @@ export default function KiderArt() {
                                     pathname: '/letStart',
                                     state: {
                                         detail: '/drawFruitTimeline',
-                                        val: ['Draw an apple', 'Draw an orange', 'Draw a mango',
+                                        val: ['Draw an app', 'Draw an orange', 'Draw a mango',
                                             'Draw a  banana', 'Draw a strawberry', 'Draw an avocado', 'Draw Cherries', 'Draw Grapes',
-                                            'Draw a Papaya', 'Draw a Pineapple']
+                                            'Draw a Papaya', 'Draw a Pineapple'],
+                                        ans:['circle', 'rectangle', 'Draw a square',
+                                            'Draw a triangle', 'Draw a heart', 'Draw an arrow', 'Draw a cross', 'Draw a star',
+                                            'Draw a crescent', 'Draw a rhombus']
                                     }
                                 })
 
@@ -72,6 +75,9 @@ export default function KiderArt() {
                                     state: {
                                         detail: '/drawFruitTimeline',
                                         val: ['Draw a circle', 'Draw a rectangle', 'Draw a square',
+                                            'Draw a triangle', 'Draw a heart', 'Draw an arrow', 'Draw a cross', 'Draw a star',
+                                            'Draw a crescent', 'Draw a rhombus'],
+                                        ans:['circle', 'rectangle', 'Draw a square',
                                             'Draw a triangle', 'Draw a heart', 'Draw an arrow', 'Draw a cross', 'Draw a star',
                                             'Draw a crescent', 'Draw a rhombus']
                                     }

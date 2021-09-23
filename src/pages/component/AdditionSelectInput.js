@@ -1,11 +1,13 @@
-import React, {useEffect, useState} from "react";
+import React, {useContext, useEffect, useState} from "react";
 import crypto from "crypto";
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import TextField from '@material-ui/core/TextField';
 import {makeStyles} from '@material-ui/core/styles';
-
+import ResultContext from "../../Context/ResultContext";
 import {useIsMobileOrTablet} from "./utils/isMobileOrTablet";
+import {AuthContext} from "../../Context/AuthContext";
+import {SelectionMarksContext} from "../../Context/SelectionMarksContext";
 
 
 const useStyles = makeStyles((theme) => ({
@@ -27,6 +29,10 @@ function Draw(props) {
         setCurrentValue('')
     }, [props])
 
+
+
+
+
     let [items, setItems] = useState([]);
     const isMobOrTab = useIsMobileOrTablet();
     const [img, setImg] = useState('')
@@ -46,7 +52,23 @@ function Draw(props) {
     const [x, setX] = useState("")
     const [currentValue, setCurrentValue] = useState('')
 
+    function addSelectionMarks(data,answer) {
 
+        if(data===answer){
+            setSelectionMarks(selectionMarks+1)
+
+        }
+
+
+        console.log(selectionMarks)
+    }
+
+    function check() {
+        setIsAuth(isAuth+1)
+        console.log(isAuth)
+    }
+    const [isAuth, setIsAuth] = useContext(AuthContext);
+    const [selectionMarks, setSelectionMarks]  = useContext(SelectionMarksContext);
     return (
         <container>
             <Grid container>
@@ -86,6 +108,10 @@ function Draw(props) {
                         <TextField value={currentValue} onDrop={(event) => {
                             var data = event.dataTransfer.getData("Text");
                             setCurrentValue(data)
+                            addSelectionMarks(data,props.c)
+
+
+
                         }} aria-dropeffect={true} style={{fontFamily: "Comic Sans MS", margin: 1, opacity: 0.8}}
                                    className={classes.root} id="filled-basic" variant="filled"/>
 
@@ -108,11 +134,15 @@ function Draw(props) {
                                         border: "1px solid black",
                                         opacity: 0.6
                                     }}>{x}</Typography>
+
                                 </Grid>
                             )
                         })}
+                        <button onClick={props.click}>Click me!</button>
+                        <button onClick = {
+                           addSelectionMarks
 
-
+  }>Check</button>
 
                     </Grid>
                 </Grid>

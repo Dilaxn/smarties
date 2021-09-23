@@ -1,5 +1,5 @@
 import './App.css';
-import React from 'react';
+import React, {useState} from 'react';
 
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
 import PrivateRoute from '../src/pages/component/PrivateRoute';
@@ -29,13 +29,21 @@ import Pronunciation from './pages/Pronunciation'
 import Chat from './pages/ChatBot'
 import Chips from './pages/check'
 import ChatEnter from "./pages/ChatEnter";
-
+import Members from "./pages/Member";
+import Modal from "./pages/Modal";
+import {AuthContext} from "./Context/AuthContext";
+import {SelectionMarksContext} from "./Context/SelectionMarksContext";
 function App() {
+    const [isAuth, setIsAuth] = useState(0);
+    const [selectionMarks, setSelectionMarks] = useState(0);
     return (
+        <AuthContext.Provider value={[isAuth, setIsAuth]}>
+            <SelectionMarksContext.Provider value={[selectionMarks, setSelectionMarks]}>
         <BrowserRouter>
-            <MainLayout>
+
                 <Switch>
                     <Route exact path='/' component={Login}/>
+                    <Route exact path='/modal' component={Modal}/>
                     <Route exact path='/login' component={Login}/>
                     <Route exact path='/signup' component={SignUp}/>
                     <PrivateRoute exact path='/individualIntro' component={IndividualIntro}/>
@@ -61,9 +69,14 @@ function App() {
                     <PrivateRoute exact path='/chips' component={Chips}/>
                     <PrivateRoute exact path='/chat' component={Chat}/>
                     <PrivateRoute exact path='/chatEnter' component={ChatEnter}/>
+
+
+                    <PrivateRoute exact path='/members' component={Members}/>
                 </Switch>
-            </MainLayout>
+
         </BrowserRouter>
+        </SelectionMarksContext.Provider>
+        </AuthContext.Provider>
     );
 }
 
